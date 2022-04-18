@@ -1,7 +1,5 @@
 testing testing please right down an update to this file for testing purpose
 Hello Jorge, this is Erick
-<<<<<<< Updated upstream
 HEllo Erick this is Jorge
-=======
 hello world
->>>>>>> Stashed changes
+
