@@ -89,7 +89,7 @@ SendBoots(form:any)
   getUserBoots()
   {
 
-    return(this._http.get('https://localhost:7041/api/UserInventory/GetBoots'))
+    return(this._http.get('https://localhost:7041/api/UserInventory/GetUserBoots'))
   }
 
 

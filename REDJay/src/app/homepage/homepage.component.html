@@ -1,4 +1,7 @@
-<h1> REDJay </h1>
+<div class="header">
+    <img src="assets/pics/Redjay_Logo3.png" alt="logo"  />
+    <h1>REDJay</h1>
+</div>
 <hr/>
 <h1> Home </h1>
 
@@ -7,6 +10,9 @@
 <hr size="10"/>
 <button (click)="getAllCustomers()"> click me!</button>
 <p *ngFor="let c of customersData"> {{c.customerFirstName}} {{c.customerLastName}}</p>
+
+
+
 
 <form id  = "addstuff" #AddForm = "ngForm" (ngSubmit) = "addboots(AddForm.value)">
 
@@ -35,11 +41,11 @@
 
 
 
-<button (click)="getAllUsersBoot()"> click boot!</button>
-<div *ngFor="let c of customersData"> {{c.uploadStyle}} {{c.uploadBrand}}
+<button id = "approve" (click)="getAllUsersBoot()"> click boot!</button>
+<div *ngFor="let b of customersData"> {{b.uploadStyle}} {{b.uploadBrand}}
 
 
-<button (click) = "editUserBoot(c.pkBootsId)" >Approve</button>
+<button id= "approve" (click) = "editUserBoot(b.pkBootsId)" >Approve</button>
 
 </div>
 <app-footer id="footer"></app-footer>

@@ -19,7 +19,7 @@ export class LoginpageComponent implements OnInit {
      this._router = routerRef;
     }
 
-    Login(email:string,pwd:string)
+    Login()
     {
       this._user.getUser().subscribe( (data)=>{
        
@@ -56,6 +56,7 @@ export class LoginpageComponent implements OnInit {
     //       console.log('Login Failed');
     //   });
     // }
+   
 
   ngOnInit(): void {
   }
