@@ -11,9 +11,9 @@ namespace REDJayREST.Controllers
         #region Boots Post
         [HttpPost]
         [Route("Add_Boots")] //bootsytle is bootname
-        public IActionResult MakeUsername(string bootstyle, string brandname, bool instock, int bootsizeid, int conditionid)
+        public IActionResult MakeUserBoot(UserBoot new2boot)
         {
-            UserBoot newBoot = new UserBoot() { UploadStyle = bootstyle, UploadBrand = brandname, InStock = instock, UploadSize = bootsizeid, UploadCondition = conditionid };
+            UserBoot newBoot = new UserBoot() { UploadStyle = new2boot.UploadStyle, UploadBrand = new2boot.UploadBrand, InStock = new2boot.InStock, UploadSize = new2boot.UploadSize, UploadCondition = new2boot.UploadCondition};
             if (newBoot != null)
             {
                 Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry<UserBoot> entityEntry = dbREDJay.UserBoots.Add(newBoot);
@@ -201,6 +201,19 @@ namespace REDJayREST.Controllers
         }
         #endregion
 
+
+       
+            [HttpGet]
+            [Route ("GetUserBoots")]
+            public IActionResult getUserBoots()
+        {
+
+            var allboot = from j in dbREDJay.UserBoots
+                         select j;
+            return Ok(allboot);
+
+        }
+
         [HttpPut]
         [Route("Edit_Boots")]
         public IActionResult EditBoots(int changes, string UploadStyle, string UploadBrand, int UploadSize, int UploadCondition, bool InStock)
@@ -225,29 +238,6 @@ namespace REDJayREST.Controllers
             }
         }
 
-        //[HttpPut]
-        //[Route("Edit_Boots")]
-        //public IActionResult EditBoots(int changes, string UploadStyle, string UploadBrand, int UploadSize, int UploadCondition, bool InStock)
-        //{
-
-        //    var editboot = (from c in dbREDJay.UserBoots
-        //                    where c.PkBootsId == changes
-        //                    select c).SingleOrDefault();
-        //    if (editboot != null)
-        //    {
-        //        editboot.UploadStyle = UploadStyle;
-        //        editboot.UploadBrand = UploadBrand;
-        //        editboot.UploadSize = UploadSize;
-        //        editboot.UploadCondition = UploadCondition;
-        //        editboot.InStock = InStock;
-        //        dbREDJay.SaveChanges();
-        //        return Ok("Changes to Boots were done");
-        //    }
-        //    else
-        //    {
-        //        return BadRequest("Edit for Boots was unsuccessful");
-        //    }
-        //}
 
         [HttpPut]
         [Route("Edit_FullPieceSuits")]

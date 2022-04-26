@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +9,7 @@ export class ClothesService {
   //privately declared variable that will take a injected global 
   //HttpClient variable from the constructor when the class is invoked
   private  _http:HttpClient;
+  public errorMessage:any;
 
   constructor(private _httpclientRef:HttpClient) {
       this._http = _httpclientRef ;
@@ -41,7 +42,63 @@ https://localhost:7041/api/UserInventory/Add_TankTop
 https://localhost:7041/api/UserInventory/Add_Shorts
 */
 
-  //READ
+
+  
+  importData:any = [] ;
+
+  // adding a new user boot
+SendBoots(form:any) 
+{
+  // var data = {
+  //   "UploadStyle":form, "UploadBrand" :"polo", "InStock": true, "UploadSize": 1, "UploadCondition" : 1 }
+     this._http
+     this._http.post<any>('https://localhost:7041/api/UserInventory/Add_Boots',form,{headers:new HttpHeaders({'Content-Type':'application/json'})}).subscribe( {
+       next:result=>{
+       this.importData = result;
+     
+     } ,
+     error: error => {
+       this.errorMessage = error.message;
+       if (error.status == 201){
+         console.log("youre good")
+       }
+       else
+       console.error('There was an error!', error );
+     } ,
+   });
+
+     if (this.importData != null)
+     {
+       console.log(this.importData)
+       console.log("success")
+     }
+     }
+
+
+  
+
+
+
+  //approve user boot
+  approveUserBoot(id:any)
+  {
+    return(this._http.put("https://localhost:7041/api/AdminApproval/Approve_Boots/"+id,null))
+  }
+
+  //get all user boots
+  getUserBoots()
+  {
+
+    return(this._http.get('https://localhost:7041/api/UserInventory/GetBoots'))
+  }
+
+
+
+
+
+
+//READ
+
   getAllBoots() {
     this._http.get('https://localhost:7041/api/Inventory/List_of_Boots').subscribe( (result)=>{
       this.clothesData = result 

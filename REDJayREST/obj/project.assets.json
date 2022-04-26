@@ -3605,19 +3605,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Erick Villegas\\.nuget\\packages\\": {}
+    "C:\\Users\\super\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Erick Villegas\\OneDrive\\Desktop\\training_sessions\\Projects\\REDJayREST\\REDJayREST.csproj",
+      "projectUniqueName": "C:\\Users\\super\\Desktop\\REDJay\\REDJayREST\\REDJayREST.csproj",
       "projectName": "REDJayREST",
-      "projectPath": "C:\\Users\\Erick Villegas\\OneDrive\\Desktop\\training_sessions\\Projects\\REDJayREST\\REDJayREST.csproj",
-      "packagesPath": "C:\\Users\\Erick Villegas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Erick Villegas\\OneDrive\\Desktop\\training_sessions\\Projects\\REDJayREST\\obj\\",
+      "projectPath": "C:\\Users\\super\\Desktop\\REDJay\\REDJayREST\\REDJayREST.csproj",
+      "packagesPath": "C:\\Users\\super\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\super\\Desktop\\REDJay\\REDJayREST\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Erick Villegas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\super\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

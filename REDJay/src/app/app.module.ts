@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { CarouselComponent } from './carousel/carousel.component';
+//import { CarouselComponent } from './carousel/carousel.component';
 import { FooterComponent } from './footer/footer.component';
 import { CatBarComponent } from './cat-bar/cat-bar.component';
 import { InvCarouselComponent } from './inv-carousel/inv-carousel.component';
@@ -19,6 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ClothesService } from './services/clothes.service';
 import { CustomersService } from './services/customers.service';
 import { CheckuserService } from './services/checkuser.service';
+import { UploadpageComponent } from './uploadpage/uploadpage.component';
+import { FormsModule } from '@angular/forms';
 // import { CheckuserService } from './services/customers.service';
 
 
@@ -27,7 +29,7 @@ import { CheckuserService } from './services/checkuser.service';
   declarations: [
     AppComponent,
     NavBarComponent,
-    CarouselComponent,
+   UploadpageComponent,
     FooterComponent,
     CatBarComponent,
     InvCarouselComponent,
@@ -38,12 +40,14 @@ import { CheckuserService } from './services/checkuser.service';
     InvPageComponent,
     LocalepageComponent,
     LoginpageComponent,
-    AddrBarComponent
+    AddrBarComponent, 
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
     
   ],
   providers: [ClothesService, CustomersService, CheckuserService ],

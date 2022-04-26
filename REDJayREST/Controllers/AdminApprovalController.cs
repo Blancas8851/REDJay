@@ -11,8 +11,8 @@ namespace REDJayREST.Controllers
         redjayDBContext dbREDJay = new redjayDBContext();
 
         [HttpPut]
-        [Route("Approve_Boots")]
-        public IActionResult EditBoots(int changes, bool Approval)
+        [Route("Approve_Boots/{changes:int}")]
+        public IActionResult EditBoots(int changes)
         {
 
             var editboots = (from c in dbREDJay.UserBoots
@@ -20,16 +20,11 @@ namespace REDJayREST.Controllers
                                      select c).SingleOrDefault();
             if (editboots != null)
             {
-                editboots.AdminApproval = Approval;
+                editboots.AdminApproval = true;
                 dbREDJay.SaveChanges();
-                if (Approval == true)
-                {
-                    return Ok("Boots have been approved");
-                }
-                else
-                {
-                    return Ok("Boots have not been approved");
-                }
+               
+                       return Ok("Boots have been approved");
+                
             }
             else
             {

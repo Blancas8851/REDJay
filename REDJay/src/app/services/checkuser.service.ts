@@ -44,10 +44,10 @@ export class CheckuserService implements CanActivate {
     //   let url = "https:localhost:7041/api/Customers/Make_Username=" + email + "/" + pwd;
     //   return this._http.get(url);    
     // }
-
+  
     getUser()
     {
-      let url = "https://localhost:7041/api/Users/UserIDnjhbjv";
+      let url = "https://localhost:7041/api/Users/UserID";
       return this._http.get(url);    
     }
     

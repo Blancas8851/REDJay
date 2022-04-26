@@ -5,5 +5,41 @@
 
 <app-nav-bar></app-nav-bar> 
 <hr size="10"/>
-<app-carousel></app-carousel> 
+<button (click)="getAllCustomers()"> click me!</button>
+<p *ngFor="let c of customersData"> {{c.customerFirstName}} {{c.customerLastName}}</p>
+
+<form id  = "addstuff" #AddForm = "ngForm" (ngSubmit) = "addboots(AddForm.value)">
+
+
+    <input type="text" name = "UploadStyle" ngModel placeholder="Boot Style" />
+    <input type="text" name = "UploadBrand" ngModel placeholder="Boot Brand" />
+
+<select name = "UploadSize"  ngModel> 
+    <option value="1"> 10.5 men / 12 Women</option>
+    <option value="2"> 10 men / 11.5Women</option>
+    <option value="3"> 9.5 men / 11 Women</option>
+    <option value="4"> 9 men / 10.5 Women</option>
+    <option value="5"> 8.5 men / 10 Women</option>
+</select>
+<select name = "UploadCondition"  ngModel> 
+    <option value="1"> New</option>
+    <option value="2"> Good</option>
+    <option value="3"> Fair</option>
+    <option value="4"> Recyclable</option>
+    
+</select>
+
+<button type="submit"> click me for boot!</button>
+</form> 
+
+
+
+
+<button (click)="getAllUsersBoot()"> click boot!</button>
+<div *ngFor="let c of customersData"> {{c.uploadStyle}} {{c.uploadBrand}}
+
+
+<button (click) = "editUserBoot(c.pkBootsId)" >Approve</button>
+
+</div>
 <app-footer id="footer"></app-footer>
