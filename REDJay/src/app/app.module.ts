@@ -18,6 +18,9 @@ import { AddrBarComponent } from './addr-bar/addr-bar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ClothesService } from './services/clothes.service';
 import { CustomersService } from './services/customers.service';
+import { CheckuserService } from './services/checkuser.service';
+// import { CheckuserService } from './services/customers.service';
+
 
 
 @NgModule({
@@ -43,7 +46,7 @@ import { CustomersService } from './services/customers.service';
     HttpClientModule
     
   ],
-  providers: [ClothesService, CustomersService],
+  providers: [ClothesService, CustomersService, CheckuserService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

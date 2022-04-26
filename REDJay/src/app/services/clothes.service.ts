@@ -15,20 +15,126 @@ export class ClothesService {
   }
 
   //Variable for returned information
-  employeeData:any = [] ;
+  clothesData:any = [] ;
 
-  //methods like getClothesList() will go here
-  //given example. The URL below is the URL from the API demo that Nikhil made
-  //we will have our own URL's from our API
-  getEmployeeDetails() {
-    this._http.get('https://localhost:7145/api/Employee/elist').subscribe( (result)=>{
-      this.employeeData = result 
+  //CRUD methods like getClothesList(), updatePants(), etc will go here
+  //sucha as given example. The URL below is the URL from the API demo 
+  //that Nikhil made we will have our own URL's from our API
+
+
+
+
+
+  //CREATE
+  /*
+https://localhost:7041/api/UserInventory/Add_Boots
+https://localhost:7041/api/UserInventory/Add_FullPieceSuit
+https://localhost:7041/api/UserInventory/Add_JacketsCoat
+https://localhost:7041/api/UserInventory/Add_Sneaker
+https://localhost:7041/api/UserInventory/Add_Sweats
+https://localhost:7041/api/UserInventory/Add_Jeans
+https://localhost:7041/api/UserInventory/Add_Sandals
+https://localhost:7041/api/UserInventory/Add_Shirts
+https://localhost:7041/api/UserInventory/Add_SuitTop
+https://localhost:7041/api/UserInventory/Add_SuitBottom
+https://localhost:7041/api/UserInventory/Add_TankTop
+https://localhost:7041/api/UserInventory/Add_Shorts
+*/
+
+  //READ
+  getAllBoots() {
+    this._http.get('https://localhost:7041/api/Inventory/List_of_Boots').subscribe( (result)=>{
+      this.clothesData = result 
     } ) ;
   }
-  //After the coding everything above which is much like coding a controller,
-  //I can next go into the app.module.ts file. In the @NgModule scope 
-  //within the square brackets of the providers section. I should put the name of the 
-  //service 'ClothesService'. It should then auto import at the top of the file. 
+
+  getFullPieceSuits() {
+    this._http.get('https://localhost:7041/api/Inventory/List_of_Full_Piece_Suits').subscribe( (result)=>{
+      this.clothesData = result 
+    } ) ;
+  }
+
+  getCoatsAndJackets() {
+    this._http.get('https://localhost:7041/api/Inventory/List_of_Jackets/Coats').subscribe( (result)=>{
+      this.clothesData = result 
+    } ) ;
+  }
+
+  getAllJeans() {
+    this._http.get('https://localhost:7041/api/Inventory/List_of_Jeans').subscribe( (result)=>{
+      this.clothesData = result 
+    } ) ;
+  }
+
+  getAllSandals() {
+    this._http.get('https://localhost:7041/api/Inventory/List_of_Sandals').subscribe( (result)=>{
+      this.clothesData = result 
+    } ) ;
+  }
+
+  getAllShorts() {
+    this._http.get('https://localhost:7041/api/Inventory/List_of_Shorts').subscribe( (result)=>{
+      this.clothesData = result 
+    } ) ;
+  }
+
+  getAllSneakers() {
+    this._http.get('https://localhost:7041/api/Inventory/List_of_Sneakers').subscribe( (result)=>{
+      this.clothesData = result 
+    } ) ;
+  }
+
+  getAllSuitBottoms() {
+    this._http.get('https://localhost:7041/api/Inventory/List_of_Suit_Bottoms').subscribe( (result)=>{
+      this.clothesData = result 
+    } ) ;
+  }
+
+  getAllSuitTops() {
+    this._http.get('https://localhost:7041/api/Inventory/List_of_Suit_Tops').subscribe( (result)=>{
+      this.clothesData = result 
+    } ) ;
+  }
+
+  getAllSweats() {
+    this._http.get('https://localhost:7041/api/Inventory/List_of_Sweats').subscribe( (result)=>{
+      this.clothesData = result 
+    } ) ;
+  }
+
+  getAllShirts() {
+    this._http.get('https://localhost:7041/api/Inventory/List_of_Shirts').subscribe( (result)=>{
+      this.clothesData = result 
+    } ) ;
+  }
+  
+  getAllTankTops() {
+    this._http.get('https://localhost:7041/api/Inventory/List_of_Tank_Tops').subscribe( (result)=>{
+      this.clothesData = result 
+    } ) ;
+  }
+
+
+  //UPDATE
+  /*
+  https://localhost:7041/api/UserInventory/Edit_Boots
+https://localhost:7041/api/UserInventory/Edit_FullPieceSuits
+https://localhost:7041/api/UserInventory/Edit_Jeans
+https://localhost:7041/api/UserInventory/Edit_Shorts
+https://localhost:7041/api/UserInventory/Edit_Sandals
+https://localhost:7041/api/UserInventory/Edit_JacketsCoats
+https://localhost:7041/api/UserInventory/Edit_SuitBottom
+https://localhost:7041/api/UserInventory/Edit_TankTops
+https://localhost:7041/api/UserInventory/Edit_Sweats
+https://localhost:7041/api/UserInventory/Edit_Sneakers
+https://localhost:7041/api/UserInventory/Edit_SuitTop
+https://localhost:7041/api/UserInventory/Edit_Shirts
+
+  */
+
+
+
+
 
 
 
