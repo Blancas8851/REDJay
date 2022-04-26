@@ -1,7 +1,21 @@
 h1 {
-    text-decoration: underline;
+    /* text-decoration: underline; */
     text-align: center;
+    color: rgb(141, 38, 38);
+    font-family: "Copperplate", fantasy;
 }
+
+.header img {
+    float: left;
+    width: 100px;
+    height: 100px;
+    background: #555;
+}
+/* 
+body {
+    background-image: "assets/pics/Redjay_Logo3.png";
+    /* background-color: #cccccc; */
+ 
 
 
 

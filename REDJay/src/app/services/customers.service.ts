@@ -21,7 +21,16 @@ export class CustomersService {
 
   //CREATE
   // https://localhost:7041/api/Customers/Register_Customer
+
+   // createUser(email:string, pwd:string)
+    // {
+    //   let url = "https:localhost:7041/api/Customers/Make_Username=" + email + "/" + pwd;
+    //   return this._http.get(url);    
+    // }
+
   
+
+
   register() {
 
   }

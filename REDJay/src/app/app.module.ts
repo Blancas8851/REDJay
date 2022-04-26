@@ -19,6 +19,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { ClothesService } from './services/clothes.service';
 import { CustomersService } from './services/customers.service';
 import { CheckuserService } from './services/checkuser.service';
+
+//import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+// import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
+
 // import { CheckuserService } from './services/customers.service';
 
 
@@ -43,7 +47,7 @@ import { CheckuserService } from './services/checkuser.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
     
   ],
   providers: [ClothesService, CustomersService, CheckuserService ],
