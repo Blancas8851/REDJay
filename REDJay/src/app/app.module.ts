@@ -53,7 +53,8 @@ import { FormsModule } from '@angular/forms';
     InvPageComponent,
     LocalepageComponent,
     // LoginpageComponent,
-    AddrBarComponent, 
+    AddrBarComponent,
+    UploadpageComponent 
     
   ],
   imports: [

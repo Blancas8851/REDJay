@@ -387,6 +387,11 @@ approveUserShirts(id:any)
 {
   return(this._http.put("https://localhost:7041/api/AdminApproval/Approve_Shirts/"+id,null))
 }
+//approve user sweats 
+approveUserSweats(id:any)
+{
+  return(this._http.put("https://localhost:7041/api/AdminApproval/Approve_Sweats/"+id,null))
+}
 
 //approve user Seakers
 approveUserSneakers(id:any)
@@ -416,7 +421,7 @@ approveUserShorts(id:any)
 
 
 
-  //get all user uploaded data
+  //get user boots
   getUserBoots()
   {
 
@@ -495,7 +500,7 @@ approveUserShorts(id:any)
 
 
 
-//READ main data
+//READ
 
   getAllBoots() {
     this._http.get('https://localhost:7041/api/Inventory/List_of_Boots').subscribe( (result)=>{
