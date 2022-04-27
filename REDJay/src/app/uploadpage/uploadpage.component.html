@@ -1,1 +1,80 @@
-<p>uploadpage works!</p>
+<div class="header">
+    <img src="assets/pics/Redjay_Logo3.png" alt="logo"  />
+    <h1>REDJay</h1>
+</div>
+<hr/>
+
+<h1>Uploads</h1>
+<app-nav-bar></app-nav-bar> 
+<hr/>
+<hr size="10"/>
+<app-uploadpage></app-uploadpage>
+<app-footer id="footer"></app-footer>
+<button id = "approve" (click)="getAllUsersBoot()"> Upload Boots</button>
+<div *ngFor="let b of customersData"> {{b.uploadStyle}} {{b.uploadBrand}}
+<button id= "approve" (click) = "editUserBoot(b.pkBootsId)" >Approve</button>
+</div>
+<hr/>
+<button id = "approve" (click)="getAllUserFullPieceSuit()"> Upload Full Piece Suit</button>
+<div *ngFor="let b of customersData"> {{b.uploadStyle}} {{b.uploadBrand}}
+<button id= "approve" (click) = "editserFullPieceSuit(b.pkFullPieceSuit)" >Approve</button>
+</div>
+<hr/>
+<button id = "approve" (click)="getAllUserJacketsCoat()"> Upload JacketsCoat</button>
+<div *ngFor="let b of customersData"> {{b.uploadStyle}} {{b.uploadBrand}}
+<button id= "approve" (click) = "editUserJacketsCoat(b.pkJacketsCoatId)" >Approve</button>
+</div>
+<hr/>
+<button id = "approve" (click)="getAllUserSneaker()"> Upload Sneakers</button>
+<div *ngFor="let b of customersData"> {{b.uploadStyle}} {{b.uploadBrand}}
+<button id= "approve" (click) = "editUserSneakers(b.pkSneakersId)" >Approve</button>
+</div>
+<hr/>
+<button id = "approve" (click)="getAllUserSweats()"> Upload Sweats</button>
+<div *ngFor="let b of customersData"> {{b.uploadStyle}} {{b.uploadBrand}}
+<button id= "approve" (click) = "editUserSweats(b.pkSweatsId)" >Approve</button>
+</div>
+<hr/>
+<button id = "approve" (click)="getAllUserJean()"> Upload Jeans</button>
+<div *ngFor="let b of customersData"> {{b.uploadStyle}} {{b.uploadBrand}}
+<button id= "approve" (click) = "editUserJeans(b.pkJeanId)" >Approve</button>
+</div>
+<hr/>
+<button id = "approve" (click)="getAllUserSandals()"> Upload Sandals</button>
+<div *ngFor="let b of customersData"> {{b.uploadStyle}} {{b.uploadBrand}}
+<button id= "approve" (click) = "editUserSandals(b.pkSandalsId)" >Approve</button>
+</div>
+<hr/>
+<button id = "approve" (click)="getAllUserShirts()"> Upload Shirt</button>
+<div *ngFor="let b of customersData"> {{b.uploadStyle}} {{b.uploadBrand}}
+<button id= "approve" (click) = "editUserShirts(b.pkShirtsId)" >Approve</button>
+</div>
+<hr/>
+<button id = "approve" (click)="getAllUserSuitTop()"> Upload Suit Top</button>
+<div *ngFor="let b of customersData"> {{b.uploadStyle}} {{b.uploadBrand}}
+<button id= "approve" (click) = "editUserSuitTop(b.pkSuitTopId)" >Approve</button>
+</div>
+<hr/>
+<button id = "approve" (click)="getAllUserSuitBottom()"> Upload Suit Bottom</button>
+<div *ngFor="let b of customersData"> {{b.uploadStyle}} {{b.uploadBrand}}
+<button id= "approve" (click) = "editUserSuitBottom(b.pkSuitBottomId)" >Approve</button>
+</div>
+<hr/>
+<button id = "approve" (click)="getAllUserTankTop()"> Upload Tanktop</button>
+<div *ngFor="let b of customersData"> {{b.uploadStyle}} {{b.uploadBrand}}
+<button id= "approve" (click) = "editUserTankTop(b.pkTankTopId)" >Approve</button>
+</div>
+<hr/>
+<button id = "approve" (click)="getAllUserShorts()"> Upload Shorts</button>
+<div *ngFor="let b of customersData"> {{b.uploadStyle}} {{b.uploadBrand}}
+<button id= "approve" (click) = "editUserShorts(b.pkShortsId)" >Approve</button>
+</div>
+
+
+
+
+
+
+
+
+
