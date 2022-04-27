@@ -7,7 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddrBarComponent implements OnInit {
 
+  x = document.getElementById('storelocaleframe') ;
+
+
   constructor() { }
+
+
+  
+  
 
   ngOnInit(): void {
   }

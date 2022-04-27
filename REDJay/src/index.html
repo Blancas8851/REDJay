@@ -11,21 +11,23 @@
 </head>
 
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 
   function changeFunc(val) {
     var selectBox = document.getElementById("selectBox");
     alert(val);
     // var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-   if(val === 'firstaddress') {
+   if(val == "firstaddress") {
     // selectBox.src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBOej8qhJ7hV7qTKG5z5Rwy5YyiI5q0KWA&q=goodwill+washington+dc" ;
     document.getElementById('storelocaleframe').src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBOej8qhJ7hV7qTKG5z5Rwy5YyiI5q0KWA&q=goodwill+washington+dc" ;
-   } else {
+    } 
+    if(val == "secondaddress"){
     // selectBox.src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBOej8qhJ7hV7qTKG5z5Rwy5YyiI5q0KWA&q=1114+1st+Ave.%2C+New+York%2C+NY+10065";
     document.getElementById('storelocaleframe').src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBOej8qhJ7hV7qTKG5z5Rwy5YyiI5q0KWA&q=1114+1st+Ave.%2C+New+York%2C+NY+10065";
    }
   }
- </script>
+ </script> -->
+ 
 
 <app-root></app-root>
 <body>
@@ -41,3 +43,16 @@
 </body>
 </html>
 
+
+<script>
+  function getFirstAddr() {
+   document.getElementById('storelocaleframe').src='https://www.google.com/maps/embed/v1/place?key=AIzaSyBOej8qhJ7hV7qTKG5z5Rwy5YyiI5q0KWA&q=goodwill+washington+dc' ;
+   console.log("first button clicked")
+   } 
+//document.location.href = newUrl;
+
+   function getSecondAddr() {
+   document.getElementById('storelocaleframe').src='https://www.google.com/maps/embed/v1/place?key=AIzaSyBOej8qhJ7hV7qTKG5z5Rwy5YyiI5q0KWA&q=1114+1st+Ave.%2C+New+York%2C+NY+10065';
+   console.log("second button clicked")
+   }
+</script>
