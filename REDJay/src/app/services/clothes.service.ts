@@ -414,7 +414,7 @@ approveUserShorts(id:any)
 
 
 
-  //get all user boots
+  //get all user uploaded data
   getUserBoots()
   {
 
@@ -426,7 +426,7 @@ approveUserShorts(id:any)
 
 
 
-//READ
+//READ main data
 
   getAllBoots() {
     this._http.get('https://localhost:7041/api/Inventory/List_of_Boots').subscribe( (result)=>{

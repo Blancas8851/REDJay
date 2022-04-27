@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { ClothesService } from '../services/clothes.service';
 
 
 @Component({
@@ -14,42 +15,57 @@ export class UploadpageComponent implements OnInit {
 
 
 
+  private _clothes:ClothesService;
   private  _http:HttpClient;
- public errorMessage: any;
-  // private _customer:CustomersService;
-   constructor(private _httpclientRef:HttpClient) {
-     this._http = _httpclientRef ;
- 
+ // private _customer:CustomersService;
+  constructor(private _httpclientRef:HttpClient, private clothes: ClothesService) {
+    this._http = _httpclientRef ;
+    this._clothes = clothes;
  
    }
    
    importData:any = [] ;
- SendBoots() 
- {
-      this._http
-      this._http.post<any>('https://localhost:7041/api/UserInventory/Add_Boots',{title:"Adding Boots"}).subscribe( {
-        next:result=>{
-        this.importData = result;
+   
+  customersData:any = [] ;
+   
+    addboots(form:any)
+    {
+       form["InStock"] =true
+   
+       this._clothes.SendBoots(form);
+        //console.log(form)
+   
+      }
       
-      } ,
-      error: error => {
-        this.errorMessage = error.message;
-        console.error('There was an error!', error);
-      } ,
-    });
-
-      if (this.importData != null)
+      //get
+      getAllUsersBoot()
       {
-        console.log(this.importData)
-        console.log("success")
-      }
-      }
-      
-      
- 
-    
-  
-  ngOnInit(): void {
-  }
+      this._clothes.getUserBoots().subscribe((result) => { 
+        this.customersData = result
+        console.log(result)
+      });
 
+      }
+
+      //put
+      editUserBoot(bootid:any) 
+      {
+
+      console.log(bootid)
+
+      this._clothes.approveUserBoot(bootid).subscribe((result)=> {
+        console.log(result)
+      });
+      }
+
+
+
+      
+          
+        
+        ngOnInit(): void {
+       
+       
+        }
+    
 }
