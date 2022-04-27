@@ -27,9 +27,9 @@ namespace REDJayREST.Controllers
         #region FullPieceSuit Post
         [HttpPost]
         [Route("Add_FullPieceSuit")]
-        public IActionResult AddFullPieceSuit(string stylename, string brandname, bool instock, int sizeid, int conditionid)
+        public IActionResult AddFullPieceSuit(UserFullPieceSuit newFPS)
         {
-            UserFullPieceSuit newFullPieceSuits = new UserFullPieceSuit() { UploadStyle = stylename, UploadBrand = brandname, InStock = instock, UploadSize = sizeid, UploadCondition = conditionid };
+            UserFullPieceSuit newFullPieceSuits = new UserFullPieceSuit() { UploadStyle = newFPS.UploadStyle, UploadBrand = newFPS.UploadBrand, InStock = newFPS.InStock, UploadSize = newFPS.UploadSize, UploadCondition = newFPS.UploadCondition };
             if (newFullPieceSuits != null)
             {
                 Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry<UserFullPieceSuit> entityEntry = dbREDJay.UserFullPieceSuits.Add(newFullPieceSuits);
