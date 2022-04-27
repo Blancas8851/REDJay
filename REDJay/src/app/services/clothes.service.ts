@@ -27,24 +27,22 @@ export class ClothesService {
 
 
   //CREATE
-  /*
-https://localhost:7041/api/UserInventory/Add_Boots
-https://localhost:7041/api/UserInventory/Add_FullPieceSuit
-https://localhost:7041/api/UserInventory/Add_JacketsCoat
-https://localhost:7041/api/UserInventory/Add_Sneaker
-https://localhost:7041/api/UserInventory/Add_Sweats
-https://localhost:7041/api/UserInventory/Add_Jeans
-https://localhost:7041/api/UserInventory/Add_Sandals
-https://localhost:7041/api/UserInventory/Add_Shirts
-https://localhost:7041/api/UserInventory/Add_SuitTop
-https://localhost:7041/api/UserInventory/Add_SuitBottom
-https://localhost:7041/api/UserInventory/Add_TankTop
-https://localhost:7041/api/UserInventory/Add_Shorts
-*/
 
 
   
-  importData:any = [] ;
+  importdata:any = [] ;
+  importdata1:any = [] ;
+  importdata2:any = [] ;
+  importdata3:any = [] ;
+  importdata4:any = [] ;
+  importdata5:any = [] ;
+  importdata6:any = [] ;
+  importdata7:any = [] ;
+  importdata8:any = [] ;
+  importdata9:any = [] ;
+  importdata10:any = [] ;
+  importdata11:any = [] ;
+  importdata12:any = [] ;
 
   // adding a new user boot
 SendBoots(form:any) 
@@ -54,7 +52,7 @@ SendBoots(form:any)
      this._http
      this._http.post<any>('https://localhost:7041/api/UserInventory/Add_Boots',form,{headers:new HttpHeaders({'Content-Type':'application/json'})}).subscribe( {
        next:result=>{
-       this.importData = result;
+       this.importdata = result;
      } ,
      error: error => {
        this.errorMessage = error.message;
@@ -66,9 +64,9 @@ SendBoots(form:any)
      } ,
    });
 
-     if (this.importData != null)
+     if (this.importdata != null)
      {
-       console.log(this.importData)
+       console.log(this.importdata)
        console.log("success")
      }
 }
@@ -79,7 +77,7 @@ SendFullPieceSuit(form:any)
      this._http
      this._http.post<any>('https://localhost:7041/api/UserInventory/Add_FullPieceSuit',form,{headers:new HttpHeaders({'Content-Type':'application/json'})}).subscribe( {
        next:result=>{
-       this.importData = result;
+       this.importdata1 = result;
      } ,
      error: error => {
        this.errorMessage = error.message;
@@ -91,9 +89,9 @@ SendFullPieceSuit(form:any)
      } ,
    });
 
-     if (this.importData != null)
+     if (this.importdata1 != null)
      {
-       console.log(this.importData)
+       console.log(this.importdata1)
        console.log("success")
      }
 }
@@ -104,7 +102,7 @@ SendJacketsCoat(form:any)
      this._http
      this._http.post<any>('https://localhost:7041/api/UserInventory/Add_JacketsCoat',form,{headers:new HttpHeaders({'Content-Type':'application/json'})}).subscribe( {
        next:result=>{
-       this.importData = result;
+       this.importdata2 = result;
      } ,
      error: error => {
        this.errorMessage = error.message;
@@ -116,9 +114,9 @@ SendJacketsCoat(form:any)
      } ,
    });
 
-     if (this.importData != null)
+     if (this.importdata2 != null)
      {
-       console.log(this.importData)
+       console.log(this.importdata2)
        console.log("success")
      }
 }
@@ -129,7 +127,7 @@ SendSneaker(form:any)
      this._http
      this._http.post<any>('https://localhost:7041/api/UserInventory/Add_Sneaker',form,{headers:new HttpHeaders({'Content-Type':'application/json'})}).subscribe( {
        next:result=>{
-       this.importData = result;
+       this.importdata3 = result;
      } ,
      error: error => {
        this.errorMessage = error.message;
@@ -141,9 +139,9 @@ SendSneaker(form:any)
      } ,
    });
 
-     if (this.importData != null)
+     if (this.importdata3 != null)
      {
-       console.log(this.importData)
+       console.log(this.importdata3)
        console.log("success")
      }
 }
@@ -154,7 +152,7 @@ SendSweats(form:any)
      this._http
      this._http.post<any>('https://localhost:7041/api/UserInventory/Add_Sweats',form,{headers:new HttpHeaders({'Content-Type':'application/json'})}).subscribe( {
        next:result=>{
-       this.importData = result;
+       this.importdata4 = result;
      } ,
      error: error => {
        this.errorMessage = error.message;
@@ -166,9 +164,9 @@ SendSweats(form:any)
      } ,
    });
 
-     if (this.importData != null)
+     if (this.importdata4 != null)
      {
-       console.log(this.importData)
+       console.log(this.importdata4)
        console.log("success")
      }
 }
@@ -177,9 +175,9 @@ SendSweats(form:any)
 SendJeans(form:any) 
 {
      this._http
-     this._http.post<any>('https://localhost:7041/api/UserInventory/Add_Jeans',form,{headers:new HttpHeaders({'Content-Type':'application/json'})}).subscribe( {
+     this._http.post<any>("https://localhost:7041/api/UserInventory/Add_UserJeans",form,{headers:new HttpHeaders({'Content-Type':'application/json'})}).subscribe( {
        next:result=>{
-       this.importData = result;
+       this.importdata5 = result;
      } ,
      error: error => {
        this.errorMessage = error.message;
@@ -191,9 +189,9 @@ SendJeans(form:any)
      } ,
    });
 
-     if (this.importData != null)
+     if (this.importdata5 != null)
      {
-       console.log(this.importData)
+       console.log(this.importdata5)
        console.log("success")
      }
 }
@@ -204,7 +202,7 @@ SendSandals(form:any)
      this._http
      this._http.post<any>('https://localhost:7041/api/UserInventory/Add_Sandals',form,{headers:new HttpHeaders({'Content-Type':'application/json'})}).subscribe( {
        next:result=>{
-       this.importData = result;
+       this.importdata6 = result;
      } ,
      error: error => {
        this.errorMessage = error.message;
@@ -216,9 +214,9 @@ SendSandals(form:any)
      } ,
    });
 
-     if (this.importData != null)
+     if (this.importdata6 != null)
      {
-       console.log(this.importData)
+       console.log(this.importdata6)
        console.log("success")
      }
 }
@@ -229,7 +227,7 @@ SendShirts(form:any)
      this._http
      this._http.post<any>('https://localhost:7041/api/UserInventory/Add_Shirts',form,{headers:new HttpHeaders({'Content-Type':'application/json'})}).subscribe( {
        next:result=>{
-       this.importData = result;
+       this.importdata7 = result;
      } ,
      error: error => {
        this.errorMessage = error.message;
@@ -241,9 +239,9 @@ SendShirts(form:any)
      } ,
    });
 
-     if (this.importData != null)
+     if (this.importdata7 != null)
      {
-       console.log(this.importData)
+       console.log(this.importdata7)
        console.log("success")
      }
 }
@@ -254,7 +252,7 @@ SendSuitTop(form:any)
      this._http
      this._http.post<any>('https://localhost:7041/api/UserInventory/Add_SuitTop',form,{headers:new HttpHeaders({'Content-Type':'application/json'})}).subscribe( {
        next:result=>{
-       this.importData = result;
+       this.importdata8 = result;
      } ,
      error: error => {
        this.errorMessage = error.message;
@@ -266,9 +264,9 @@ SendSuitTop(form:any)
      } ,
    });
 
-     if (this.importData != null)
+     if (this.importdata8 != null)
      {
-       console.log(this.importData)
+       console.log(this.importdata8)
        console.log("success")
      }
 }
@@ -279,7 +277,7 @@ SendSuitBottom(form:any)
      this._http
      this._http.post<any>('https://localhost:7041/api/UserInventory/Add_SuitBottom',form,{headers:new HttpHeaders({'Content-Type':'application/json'})}).subscribe( {
        next:result=>{
-       this.importData = result;
+       this.importdata9 = result;
      } ,
      error: error => {
        this.errorMessage = error.message;
@@ -291,9 +289,9 @@ SendSuitBottom(form:any)
      } ,
    });
 
-     if (this.importData != null)
+     if (this.importdata9 != null)
      {
-       console.log(this.importData)
+       console.log(this.importdata9)
        console.log("success")
      }
 }
@@ -302,9 +300,9 @@ SendSuitBottom(form:any)
 SendTankTop(form:any) 
 {
      this._http
-     this._http.post<any>('https://localhost:7041/api/UserInventory/Add_TankTop',form,{headers:new HttpHeaders({'Content-Type':'application/json'})}).subscribe( {
+     this._http.post<any>("https://localhost:7041/api/UserInventory/Add_TankTop",form,{headers:new HttpHeaders({'Content-Type':'application/json'})}).subscribe( {
        next:result=>{
-       this.importData = result;
+       this.importdata10 = result;
      } ,
      error: error => {
        this.errorMessage = error.message;
@@ -316,9 +314,9 @@ SendTankTop(form:any)
      } ,
    });
 
-     if (this.importData != null)
+     if (this.importdata10 != null)
      {
-       console.log(this.importData)
+       console.log(this.importdata10)
        console.log("success")
      }
 }
@@ -329,7 +327,7 @@ SendShorts(form:any)
      this._http
      this._http.post<any>('https://localhost:7041/api/UserInventory/Add_Shorts',form,{headers:new HttpHeaders({'Content-Type':'application/json'})}).subscribe( {
        next:result=>{
-       this.importData = result;
+       this.importdata11 = result;
      } ,
      error: error => {
        this.errorMessage = error.message;
@@ -341,9 +339,9 @@ SendShorts(form:any)
      } ,
    });
 
-     if (this.importData != null)
+     if (this.importdata11 != null)
      {
-       console.log(this.importData)
+       console.log(this.importdata11)
        console.log("success")
      }
 }
@@ -355,13 +353,13 @@ SendShorts(form:any)
   //approve user boot
   approveUserBoot(id:any)
   {
-    return(this._http.put("https://localhost:7041/api/AdminApproval/Approve_Boots/"+id,null))
+    return(this._http.put("https://localhost:7041/api/AdminApproval/Approve_Boots"+id,null))
   }
 
   //approve user FullPieceSuit
   approveUserFullPieceSuit(id:any)
   {
-    return(this._http.put("https://localhost:7041/api/AdminApproval/Approve_FullPieceSuit/"+id,null))
+    return(this._http.put("https://localhost:7041/api/AdminApproval/Approve_FullPieceSuit"+id,null))
   }
 
 //approve user JacketsCoat
@@ -373,50 +371,54 @@ approveUserJacketsCoat(id:any)
 //approve user Jeans
 approveUserJeans(id:any)
 {
-  return(this._http.put("https://localhost:7041/api/AdminApproval/Approve_Jeans/"+id,null))
+  return(this._http.put("https://localhost:7041/api/AdminApproval/Approve_Jeans"+id,null))
 }
 
 //approve user Sandals
 approveUserSandals(id:any)
 {
-  return(this._http.put("https://localhost:7041/api/AdminApproval/Approve_Sandals/"+id,null))
+  return(this._http.put("https://localhost:7041/api/AdminApproval/Approve_Sandals"+id,null))
 }
 
 //approve user Shirts
 approveUserShirts(id:any)
 {
-  return(this._http.put("https://localhost:7041/api/AdminApproval/Approve_Shirts/"+id,null))
+  return(this._http.put("https://localhost:7041/api/AdminApproval/Approve_Shirts"+id,null))
 }
 //approve user sweats 
 approveUserSweats(id:any)
 {
-  return(this._http.put("https://localhost:7041/api/AdminApproval/Approve_Sweats/"+id,null))
+  return(this._http.put("https://localhost:7041/api/AdminApproval/Approve_Sweats"+id,null))
 }
 
 //approve user Seakers
 approveUserSneakers(id:any)
 {
-  return(this._http.put("https://localhost:7041/api/AdminApproval/Approve_Sneakers/"+id,null))
+  return(this._http.put("https://localhost:7041/api/AdminApproval/Approve_Sneakers"+id,null))
 }
 
 //approve user SuitTop
 approveUserSuitTop(id:any)
 {
-  return(this._http.put("https://localhost:7041/api/AdminApproval/Approve_SuitTop/"+id,null))
+  return(this._http.put("https://localhost:7041/api/AdminApproval/Approve_SuitTop"+id,null))
 }
 
 //approve user SuitBottom
 approveUserSuitBottom(id:any)
 {
-  return(this._http.put("https://localhost:7041/api/AdminApproval/Approve_SuitBottom/"+id,null))
+  return(this._http.put("https://localhost:7041/api/AdminApproval/Approve_SuitBottom"+id,null))
 }
-
+//approve user SuitBottom
+approveUserTankTop(id:any)
+{
+  return(this._http.put("https://localhost:7041/api/AdminApproval/Approve_TankTops"+id,null))
+}
 
 
 //approve user Shorts
 approveUserShorts(id:any)
 {
-  return(this._http.put("https://localhost:7041/api/AdminApproval/Approve_Shorts/"+id,null))
+  return(this._http.put("https://localhost:7041/api/AdminApproval/Approve_Shorts"+id,null))
 }
 
 
