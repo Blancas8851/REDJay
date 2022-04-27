@@ -4,7 +4,12 @@
     color: rgb(141, 38, 38);
     font-family: "Copperplate", fantasy;
 }
-
+.header img {
+    float: left;
+    width: 150px;
+    height: 100px;
+    background: #555;
+}
 .header img {
     float: left;
     width: 100px;
@@ -31,13 +36,13 @@ li {
 h1 {
     /* text-decoration: underline; */
     text-align: center;
-    color: blanchedalmond;
-    font-family:   Verdana;
+    color: rgb(141, 38, 38);
+    font-family: "Copperplate", fantasy;
 }
 
 .header img {
     float: left;
-    width: 100px;
+    width: 150px;
     height: 100px;
     background: #555;
 }
@@ -51,6 +56,7 @@ body {
 
 ul {
     height: 400px;
+    color:black;
 }
 
 li {

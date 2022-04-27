@@ -6,11 +6,17 @@ h1 {
 }
 h2 {
     font-size: 100;
+    color: black
 }
 
 .header img {
     float: left;
-    width: 100px;
+    width: 150px;
     height: 100px;
     background: #555;
+}
+
+img {
+    width: 330px;
+    height: 250px;
 }
