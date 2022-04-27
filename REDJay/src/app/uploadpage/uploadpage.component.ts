@@ -154,7 +154,7 @@ export class UploadpageComponent implements OnInit {
      
         }
 
-<<<<<<< HEAD
+
       editserFullPieceSuit(suitid:any) 
       {
 
@@ -255,7 +255,6 @@ export class UploadpageComponent implements OnInit {
 
 
           
-=======
 
         addJacket(form:any)
         {
@@ -340,7 +339,7 @@ export class UploadpageComponent implements OnInit {
 
                 
         
->>>>>>> 789243623e071b96c080d68e2c42c02f9f246cc7
+
         ngOnInit(): void {
        
        
