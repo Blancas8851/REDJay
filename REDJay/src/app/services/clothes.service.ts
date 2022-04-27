@@ -353,7 +353,7 @@ SendShorts(form:any)
   //approve user boot
   approveUserBoot(id:any)
   {
-    return(this._http.put("https://localhost:7041/api/AdminApproval/Approve_Boots"+id,null))
+    return(this._http.put("https://localhost:7041/api/AdminApproval/Approve_Boots/"+id,null))
   }
 
   //approve user FullPieceSuit
