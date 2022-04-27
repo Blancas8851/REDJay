@@ -308,9 +308,16 @@ namespace REDJayREST.Controllers
         #region TankTop Post
         [HttpPost]
         [Route("Add_TankTop")]
-        public IActionResult AddTankTop(string stylename, string brandname, bool instock, int sizeid, int conditionid)
+        public IActionResult AddTankTop(UserTankTop newTank)
         {
-            UserTankTop newtanktop = new UserTankTop() { UploadStyle = stylename, UploadBrand = brandname, InStock = instock, UploadSize = sizeid, UploadCondition = conditionid };
+            UserTankTop newtanktop = new UserTankTop() {
+                UploadStyle = newTank.UploadStyle,
+                UploadBrand = newTank.UploadBrand,
+                InStock = newTank.InStock,
+                UploadSize = newTank.UploadSize,
+                UploadCondition = newTank.UploadCondition
+
+            };
             if (newtanktop != null)
             {
                 Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry<UserTankTop> entityEntry = dbREDJay.UserTankTops.Add(newtanktop);

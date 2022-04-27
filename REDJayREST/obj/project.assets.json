@@ -3605,25 +3605,11 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
-    "C:\\Users\\Erick Villegas\\.nuget\\packages\\": {}
-=======
     "C:\\Users\\super\\.nuget\\packages\\": {}
->>>>>>> 3984ab6071b7415cdf10c6ab2be6494061164135
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\Erick Villegas\\Downloads\\REDJay\\REDJayREST\\REDJayREST.csproj",
-      "projectName": "REDJayREST",
-      "projectPath": "C:\\Users\\Erick Villegas\\Downloads\\REDJay\\REDJayREST\\REDJayREST.csproj",
-      "packagesPath": "C:\\Users\\Erick Villegas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Erick Villegas\\Downloads\\REDJay\\REDJayREST\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\Erick Villegas\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
       "projectUniqueName": "C:\\Users\\super\\Desktop\\REDJay\\REDJayREST\\REDJayREST.csproj",
       "projectName": "REDJayREST",
       "projectPath": "C:\\Users\\super\\Desktop\\REDJay\\REDJayREST\\REDJayREST.csproj",
@@ -3632,7 +3618,6 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\super\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 3984ab6071b7415cdf10c6ab2be6494061164135
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3712,5 +3697,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\super\\Desktop\\REDJay\\REDJayREST\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
