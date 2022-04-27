@@ -14,8 +14,8 @@
   <td>
     <button (click)="getAllShirts()"> Get Shirts </button>
   </td><td>
-    <button (click)="getAllShoes()"> Get Shoes </button>
-  </td><td>
+    <!-- <button (click)="getAllShoes()"> Get Shoes </button>
+  </td><td> -->
     <button (click)="getAllShorts()"> Get Shorts </button>
   </td><td>
     <button (click)="getAllSweats()"> Get Sweats </button>
@@ -47,10 +47,22 @@
   <tr *ngFor="let c of clothesData">
     <!-- the name of the json key of the key and value pair
     will be invoked by a dot operator below -->
-    <td> {{c.boots}}</td>
+    <td> {{c.brandName}}</td>
+    <td> {{c.styleName}}</td>
+    <td> {{c.sandalName}}</td>
+    <td> {{c.shortsBrand}}</td>
+    <td> {{c.jeanBrand}}</td>
+    <td> {{c.sweatsBrand}}</td>
+
     <td> {{c.bootname}}</td>
     <td> {{c.bootcondition}}</td>
     <td> {{c.bootsize}}</td>
+    <td> {{c.shortsStyle}}</td>
+    <td> {{c.bootName}}</td>
+    <td> {{c.sweatsStyle}}</td>
+    <td> {{c.sneakerName}}</td>
+    <td> {{c.jeanStyle}}</td>
+    
   </tr>
 </table>
 

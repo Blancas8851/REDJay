@@ -10,7 +10,7 @@ namespace REDJayREST.Controllers
         redjayDBContext dbREDJay = new redjayDBContext();
 
         [HttpGet]
-        [Route("List of Boots")]
+        [Route("List_of_Boots")]
         public IActionResult GetBootslist()
         {
             var bootslist = from b in dbREDJay.Boots
@@ -19,7 +19,7 @@ namespace REDJayREST.Controllers
         }
 
         [HttpGet]
-        [Route("List of Full Piece Suits")]
+        [Route("List_of_Full_Piece_Suits")]
         public IActionResult GetFullPieceSuitList()
         {
             var suitslist = from s in dbREDJay.FullPieceSuits
@@ -28,7 +28,7 @@ namespace REDJayREST.Controllers
         }
 
         [HttpGet]
-        [Route("List of Jackets/Coats")]
+        [Route("List_of_Jackets/Coats")]
         public IActionResult GetJacketslist()
         {
             var jacketslist = from j in dbREDJay.JacketsCoats
@@ -37,7 +37,7 @@ namespace REDJayREST.Controllers
         }
 
         [HttpGet]
-        [Route("List of Jeans")]
+        [Route("List_of_Jeans")]
         public IActionResult GetJeanslist()
         {
             var jeanslist = from j in dbREDJay.Jeans
@@ -46,7 +46,7 @@ namespace REDJayREST.Controllers
         }
 
         [HttpGet]
-        [Route("List of Sandals")]
+        [Route("List_of_Sandals")]
         public IActionResult GetSandalslist()
         {
             var sandalslist = from s in dbREDJay.Sandals
@@ -55,7 +55,7 @@ namespace REDJayREST.Controllers
         }
 
         [HttpGet]
-        [Route("List of Shorts")]
+        [Route("List_of_Shorts")]
         public IActionResult GetClotheslist()
         {
             var shortslist = from s in dbREDJay.Shorts
@@ -64,7 +64,7 @@ namespace REDJayREST.Controllers
         }
 
         [HttpGet]
-        [Route("List of Sneakers")]
+        [Route("List_of_Sneakers")]
         public IActionResult GetSneakerslist()
         {
             var sneakerslist = from s in dbREDJay.Sneakers
@@ -73,7 +73,7 @@ namespace REDJayREST.Controllers
         }
 
         [HttpGet]
-        [Route("List of Suit Bottoms")]
+        [Route("List_of_Suit_Bottoms")]
         public IActionResult GetSuitBottomslist()
         {
             var suitbottomslist = from b in dbREDJay.SuitBottoms
@@ -82,7 +82,7 @@ namespace REDJayREST.Controllers
         }
 
         [HttpGet]
-        [Route("List of Suit Tops")]
+        [Route("List_of_Suit_Tops")]
         public IActionResult GetSuitTopslist()
         {
             var suittopslist = from t in dbREDJay.SuitTops
@@ -91,7 +91,7 @@ namespace REDJayREST.Controllers
         }
 
         [HttpGet]
-        [Route("List of Sweats")]
+        [Route("List_of_Sweats")]
         public IActionResult GetSweatslist()
         {
             var sweatslist = from s in dbREDJay.Sweats
@@ -101,7 +101,7 @@ namespace REDJayREST.Controllers
 
 
         [HttpGet]
-        [Route("List of Shirts")]
+        [Route("List_of_Shirts")]
         public IActionResult GetShirtslist()
         {
             var shirtslist = from t in dbREDJay.Shirts
@@ -110,7 +110,7 @@ namespace REDJayREST.Controllers
         }
 
         [HttpGet]
-        [Route("List of Tank_Tops")]
+        [Route("List_of_Tank_Tops")]
         public IActionResult GetTankTopslist()
         {
             var tanktopslist = from b in dbREDJay.Boots

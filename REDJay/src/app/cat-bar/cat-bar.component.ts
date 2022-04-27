@@ -24,6 +24,7 @@ export class CatBarComponent implements OnInit {
   getAllBoots() {
     this._http.get('https://localhost:7041/api/Inventory/List_of_Boots').subscribe( (result)=>{
       this.clothesData = result 
+      return(result)
     } ) ;
   }
 
