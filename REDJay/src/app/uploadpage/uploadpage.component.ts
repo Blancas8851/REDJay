@@ -28,8 +28,10 @@ export class UploadpageComponent implements OnInit {
    
   customersData:any = [] ;
    
+
+    
     addboots(form:any)
-    {
+      {
        form["InStock"] =true
    
        this._clothes.SendBoots(form);
@@ -47,6 +49,7 @@ export class UploadpageComponent implements OnInit {
 
       }
 
+
       //put
       editUserBoot(bootid:any) 
       {
@@ -59,9 +62,98 @@ export class UploadpageComponent implements OnInit {
       }
 
 
+      addFullPiece(form:any)
+      {
+         form["InStock"] =true
+     
+         this._clothes.SendFullPieceSuit(form);
+          //console.log(form)
+     
+        }
 
-      
-          
+
+        addJacket(form:any)
+        {
+         form["InStock"] =true
+     
+         this._clothes.SendJacketsCoat(form);
+          //console.log(form)
+     
+        }
+        addsneaker(form:any)
+        {
+         form["InStock"] =true
+     
+         this._clothes.SendSneaker(form);
+          //console.log(form)
+     
+        }
+        addsweats(form:any)
+        {
+         form["InStock"] =true
+     
+         this._clothes.SendSweats(form);
+          //console.log(form)
+     
+        }
+        addjeans(form:any)
+        {
+         form["InStock"] =true
+     
+         this._clothes.SendJeans(form);
+          //console.log(form)
+     
+        }
+        addSandals(form:any)
+        {
+         form["InStock"] =true
+     
+         this._clothes.SendSandals(form);
+          //console.log(form)
+     
+        }
+        addShirts(form:any)
+        {
+         form["InStock"] =true
+     
+         this._clothes.SendShirts(form);
+          //console.log(form)
+     
+        }
+        addSuitTop(form:any)
+        {
+         form["InStock"] =true
+     
+         this._clothes.SendSuitTop(form);
+          //console.log(form)
+     
+        }
+        addSuitBottom(form:any)
+        {
+         form["InStock"] =true
+     
+         this._clothes.SendSuitBottom(form);
+          //console.log(form)
+     
+        }
+        addTankTop(form:any)
+        {
+         form["InStock"] =true
+     
+         this._clothes.SendTankTop(form);
+          //console.log(form)
+     
+        }                
+        addShorts(form:any)
+        {
+         form["InStock"] =true
+     
+         this._clothes.SendShorts(form);
+          //console.log(form)
+     
+        }
+
+                
         
         ngOnInit(): void {
        
