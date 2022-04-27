@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Erick Villegas\\Downloads\\REDJay\\REDJayREST\\REDJayREST.csproj": {}
   },
   "projects": {
@@ -15,6 +16,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Erick Villegas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "C:\\Users\\super\\Desktop\\REDJay\\REDJayREST\\REDJayREST.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\super\\Desktop\\REDJay\\REDJayREST\\REDJayREST.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\super\\Desktop\\REDJay\\REDJayREST\\REDJayREST.csproj",
+        "projectName": "REDJayREST",
+        "projectPath": "C:\\Users\\super\\Desktop\\REDJay\\REDJayREST\\REDJayREST.csproj",
+        "packagesPath": "C:\\Users\\super\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\super\\Desktop\\REDJay\\REDJayREST\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\super\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 3984ab6071b7415cdf10c6ab2be6494061164135
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
