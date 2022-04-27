@@ -51,14 +51,10 @@ SendBoots(form:any)
 {
   // var data = {
   //   "UploadStyle":form, "UploadBrand" :"polo", "InStock": true, "UploadSize": 1, "UploadCondition" : 1 }
-
-
-  
      this._http
      this._http.post<any>('https://localhost:7041/api/UserInventory/Add_Boots',form,{headers:new HttpHeaders({'Content-Type':'application/json'})}).subscribe( {
        next:result=>{
        this.importData = result;
-     
      } ,
      error: error => {
        this.errorMessage = error.message;
@@ -75,10 +71,284 @@ SendBoots(form:any)
        console.log(this.importData)
        console.log("success")
      }
+}
+
+// adding a new user FullPieceSuit
+SendFullPieceSuit(form:any) 
+{
+     this._http
+     this._http.post<any>('https://localhost:7041/api/UserInventory/Add_FullPieceSuit',form,{headers:new HttpHeaders({'Content-Type':'application/json'})}).subscribe( {
+       next:result=>{
+       this.importData = result;
+     } ,
+     error: error => {
+       this.errorMessage = error.message;
+       if (error.status == 201){
+         console.log("youre good")
+       }
+       else
+       console.error('There was an error!', error );
+     } ,
+   });
+
+     if (this.importData != null)
+     {
+       console.log(this.importData)
+       console.log("success")
      }
+}
+
+// adding a new user JacketsCoat
+SendJacketsCoat(form:any) 
+{
+     this._http
+     this._http.post<any>('https://localhost:7041/api/UserInventory/Add_JacketsCoat',form,{headers:new HttpHeaders({'Content-Type':'application/json'})}).subscribe( {
+       next:result=>{
+       this.importData = result;
+     } ,
+     error: error => {
+       this.errorMessage = error.message;
+       if (error.status == 201){
+         console.log("youre good")
+       }
+       else
+       console.error('There was an error!', error );
+     } ,
+   });
+
+     if (this.importData != null)
+     {
+       console.log(this.importData)
+       console.log("success")
+     }
+}
+
+// adding a new user Sneaker
+SendSneaker(form:any) 
+{
+     this._http
+     this._http.post<any>('https://localhost:7041/api/UserInventory/Add_Sneaker',form,{headers:new HttpHeaders({'Content-Type':'application/json'})}).subscribe( {
+       next:result=>{
+       this.importData = result;
+     } ,
+     error: error => {
+       this.errorMessage = error.message;
+       if (error.status == 201){
+         console.log("youre good")
+       }
+       else
+       console.error('There was an error!', error );
+     } ,
+   });
+
+     if (this.importData != null)
+     {
+       console.log(this.importData)
+       console.log("success")
+     }
+}
+
+// adding a new user Sweats
+SendSweats(form:any) 
+{
+     this._http
+     this._http.post<any>('https://localhost:7041/api/UserInventory/Add_Sweats',form,{headers:new HttpHeaders({'Content-Type':'application/json'})}).subscribe( {
+       next:result=>{
+       this.importData = result;
+     } ,
+     error: error => {
+       this.errorMessage = error.message;
+       if (error.status == 201){
+         console.log("youre good")
+       }
+       else
+       console.error('There was an error!', error );
+     } ,
+   });
+
+     if (this.importData != null)
+     {
+       console.log(this.importData)
+       console.log("success")
+     }
+}
+
+// adding a new user Jeans
+SendJeans(form:any) 
+{
+     this._http
+     this._http.post<any>('https://localhost:7041/api/UserInventory/Add_Jeans',form,{headers:new HttpHeaders({'Content-Type':'application/json'})}).subscribe( {
+       next:result=>{
+       this.importData = result;
+     } ,
+     error: error => {
+       this.errorMessage = error.message;
+       if (error.status == 201){
+         console.log("youre good")
+       }
+       else
+       console.error('There was an error!', error );
+     } ,
+   });
+
+     if (this.importData != null)
+     {
+       console.log(this.importData)
+       console.log("success")
+     }
+}
+
+// adding a new user Sandals
+SendSandals(form:any) 
+{
+     this._http
+     this._http.post<any>('https://localhost:7041/api/UserInventory/Add_Sandals',form,{headers:new HttpHeaders({'Content-Type':'application/json'})}).subscribe( {
+       next:result=>{
+       this.importData = result;
+     } ,
+     error: error => {
+       this.errorMessage = error.message;
+       if (error.status == 201){
+         console.log("youre good")
+       }
+       else
+       console.error('There was an error!', error );
+     } ,
+   });
+
+     if (this.importData != null)
+     {
+       console.log(this.importData)
+       console.log("success")
+     }
+}
+
+// adding a new user Shirts
+SendShirts(form:any) 
+{
+     this._http
+     this._http.post<any>('https://localhost:7041/api/UserInventory/Add_Shirts',form,{headers:new HttpHeaders({'Content-Type':'application/json'})}).subscribe( {
+       next:result=>{
+       this.importData = result;
+     } ,
+     error: error => {
+       this.errorMessage = error.message;
+       if (error.status == 201){
+         console.log("youre good")
+       }
+       else
+       console.error('There was an error!', error );
+     } ,
+   });
+
+     if (this.importData != null)
+     {
+       console.log(this.importData)
+       console.log("success")
+     }
+}
+
+// adding a new user SuitTop
+SendSuitTop(form:any) 
+{
+     this._http
+     this._http.post<any>('https://localhost:7041/api/UserInventory/Add_SuitTop',form,{headers:new HttpHeaders({'Content-Type':'application/json'})}).subscribe( {
+       next:result=>{
+       this.importData = result;
+     } ,
+     error: error => {
+       this.errorMessage = error.message;
+       if (error.status == 201){
+         console.log("youre good")
+       }
+       else
+       console.error('There was an error!', error );
+     } ,
+   });
+
+     if (this.importData != null)
+     {
+       console.log(this.importData)
+       console.log("success")
+     }
+}
+
+// adding a new user SuitBottom
+SendSuitBottom(form:any) 
+{
+     this._http
+     this._http.post<any>('https://localhost:7041/api/UserInventory/Add_SuitBottom',form,{headers:new HttpHeaders({'Content-Type':'application/json'})}).subscribe( {
+       next:result=>{
+       this.importData = result;
+     } ,
+     error: error => {
+       this.errorMessage = error.message;
+       if (error.status == 201){
+         console.log("youre good")
+       }
+       else
+       console.error('There was an error!', error );
+     } ,
+   });
+
+     if (this.importData != null)
+     {
+       console.log(this.importData)
+       console.log("success")
+     }
+}
+
+// adding a new user TankTop
+SendTankTop(form:any) 
+{
+     this._http
+     this._http.post<any>('https://localhost:7041/api/UserInventory/Add_TankTop',form,{headers:new HttpHeaders({'Content-Type':'application/json'})}).subscribe( {
+       next:result=>{
+       this.importData = result;
+     } ,
+     error: error => {
+       this.errorMessage = error.message;
+       if (error.status == 201){
+         console.log("youre good")
+       }
+       else
+       console.error('There was an error!', error );
+     } ,
+   });
+
+     if (this.importData != null)
+     {
+       console.log(this.importData)
+       console.log("success")
+     }
+}
+
+// adding a new user Shorts
+SendShorts(form:any) 
+{
+     this._http
+     this._http.post<any>('https://localhost:7041/api/UserInventory/Add_Shorts',form,{headers:new HttpHeaders({'Content-Type':'application/json'})}).subscribe( {
+       next:result=>{
+       this.importData = result;
+     } ,
+     error: error => {
+       this.errorMessage = error.message;
+       if (error.status == 201){
+         console.log("youre good")
+       }
+       else
+       console.error('There was an error!', error );
+     } ,
+   });
+
+     if (this.importData != null)
+     {
+       console.log(this.importData)
+       console.log("success")
+     }
+}
 
 
-  
 
 
 
@@ -87,6 +357,62 @@ SendBoots(form:any)
   {
     return(this._http.put("https://localhost:7041/api/AdminApproval/Approve_Boots/"+id,null))
   }
+
+  //approve user FullPieceSuit
+  approveUserFullPieceSuit(id:any)
+  {
+    return(this._http.put("https://localhost:7041/api/AdminApproval/Approve_FullPieceSuit/"+id,null))
+  }
+
+//approve user JacketsCoat
+approveUserJacketsCoat(id:any)
+{
+  return(this._http.put("https://localhost:7041/api/AdminApproval/Approve_JacketsCoat/"+id,null))
+}
+
+//approve user Jeans
+approveUserJeans(id:any)
+{
+  return(this._http.put("https://localhost:7041/api/AdminApproval/Approve_Jeans/"+id,null))
+}
+
+//approve user Sandals
+approveUserSandals(id:any)
+{
+  return(this._http.put("https://localhost:7041/api/AdminApproval/Approve_Sandals/"+id,null))
+}
+
+//approve user Shirts
+approveUserShirts(id:any)
+{
+  return(this._http.put("https://localhost:7041/api/AdminApproval/Approve_Shirts/"+id,null))
+}
+
+//approve user Seakers
+approveUserSneakers(id:any)
+{
+  return(this._http.put("https://localhost:7041/api/AdminApproval/Approve_Sneakers/"+id,null))
+}
+
+//approve user SuitTop
+approveUserSuitTop(id:any)
+{
+  return(this._http.put("https://localhost:7041/api/AdminApproval/Approve_SuitTop/"+id,null))
+}
+
+//approve user SuitBottom
+approveUserSuitBottom(id:any)
+{
+  return(this._http.put("https://localhost:7041/api/AdminApproval/Approve_SuitBottom/"+id,null))
+}
+
+//approve user Shorts
+approveUserShorts(id:any)
+{
+  return(this._http.put("https://localhost:7041/api/AdminApproval/Approve_Shorts/"+id,null))
+}
+
+
 
   //get all user boots
   getUserBoots()

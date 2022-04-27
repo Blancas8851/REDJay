@@ -3605,24 +3605,26 @@
     ]
   },
   "packageFolders": {
-    "/Users/rahmelhill/.nuget/packages/": {}
+    "C:\\Users\\Erick Villegas\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/rahmelhill/Desktop/Project2/REDJay/REDJayREST/REDJayREST.csproj",
+      "projectUniqueName": "C:\\Users\\Erick Villegas\\Downloads\\REDJay\\REDJayREST\\REDJayREST.csproj",
       "projectName": "REDJayREST",
-      "projectPath": "/Users/rahmelhill/Desktop/Project2/REDJay/REDJayREST/REDJayREST.csproj",
-      "packagesPath": "/Users/rahmelhill/.nuget/packages/",
-      "outputPath": "/Users/rahmelhill/Desktop/Project2/REDJay/REDJayREST/obj/",
+      "projectPath": "C:\\Users\\Erick Villegas\\Downloads\\REDJay\\REDJayREST\\REDJayREST.csproj",
+      "packagesPath": "C:\\Users\\Erick Villegas\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Erick Villegas\\Downloads\\REDJay\\REDJayREST\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/rahmelhill/.config/NuGet/NuGet.Config"
+        "C:\\Users\\Erick Villegas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3692,7 +3694,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
