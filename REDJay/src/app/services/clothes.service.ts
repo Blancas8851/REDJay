@@ -495,11 +495,6 @@ approveUserShorts(id:any)
 
 //READ main data
 
-  getAllBoots() {
-    this._http.get('https://localhost:7041/api/Inventory/List_of_Boots').subscribe( (result)=>{
-      this.clothesData = result 
-    } ) ;
-  }
 
   getFullPieceSuits() {
     this._http.get('https://localhost:7041/api/Inventory/List_of_Full_Piece_Suits').subscribe( (result)=>{
