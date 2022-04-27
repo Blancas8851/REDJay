@@ -28,42 +28,38 @@ namespace REDJayREST.Controllers
             }
             else
             {
-                return BadRequest("Boots have not approved");
+                return BadRequest("Boots have not been approved");
             }
 
         }
-
+        //done--------------------------------------------------------------
         [HttpPut]
-        [Route("Approve_FullPieceSuit")]
-        public IActionResult EditFullPieceSuit(int changes, bool Approval)
+        [Route("Approve_FullPieceSuit/{changes:int}")]
+        public IActionResult EditFullPieceSuit(int changes)
         {
 
             var editfullpiecesuit = (from c in dbREDJay.UserFullPieceSuits
                                      where c.PkFullSuit == changes
                                      select c).SingleOrDefault();
             if (editfullpiecesuit != null)
-            {   
-                editfullpiecesuit.AdminApproval = Approval;
+            {
+                editfullpiecesuit.AdminApproval = true;
                 dbREDJay.SaveChanges();
-                if (Approval == true)
-                {
-                    return Ok("Full Piece Suit has been approved");
-                }
-                else
-                {
-                    return Ok("Full Piece Suit has not been approved");
-                }
+
+                return Ok("Full Piece Suit has been approved");
+
             }
             else
             {
-                return BadRequest("Full Piece Suits was not approved");
+                return BadRequest("Full Piece Suit has not been approved");
             }
 
         }
+        //done--------------------------------------------------------------
 
         [HttpPut]
         [Route("Approve_JacketsCoat")]
-        public IActionResult EditJacketsCoat(int changes, bool Approval)
+        public IActionResult EditJacketsCoat(int changes)
         {
 
             var editjacketscoat = (from c in dbREDJay.UserJacketsCoats
@@ -71,27 +67,23 @@ namespace REDJayREST.Controllers
                                      select c).SingleOrDefault();
             if (editjacketscoat != null)
             {
-                editjacketscoat.AdminApproval = Approval;
+                editjacketscoat.AdminApproval = true;
                 dbREDJay.SaveChanges();
-                if (Approval == true)
-                {
-                    return Ok("Jacket or Coat has been approved");
-                }
-                else
-                {
-                    return Ok("Jacket or Coat has not been approved");
-                }
+
+                return Ok("Jackets and Coats have been approved");
+
             }
             else
             {
-                return BadRequest("Jacket or Coat was not approved");
+                return BadRequest("Jackets and Coats have not been approved");
             }
 
         }
+        //done--------------------------------------------------------------
 
         [HttpPut]
-        [Route("Approve_Jeans")]
-        public IActionResult EditJeans(int changes, bool Approval)
+        [Route("Approve_Jeans{changes:int}")]
+        public IActionResult EditJeans(int changes)
         {
 
             var editjeans = (from c in dbREDJay.UserJeans
@@ -99,27 +91,24 @@ namespace REDJayREST.Controllers
                                    select c).SingleOrDefault();
             if (editjeans != null)
             {
-                editjeans.AdminApproval = Approval;
+                editjeans.AdminApproval = true;
                 dbREDJay.SaveChanges();
-                if (Approval == true)
-                {
-                    return Ok("Jeans have been approved");
-                }
-                else
-                {
-                    return Ok("Jeans have not been approved");
-                }
+
+                return Ok("Jeans have been approved");
+
             }
             else
             {
-                return BadRequest("Jeans were not approved");
+                return BadRequest("Jeans have not been approved");
             }
 
         }
 
+        //done--------------------------------------------------------------
+
         [HttpPut]
-        [Route("Approve_Sandals")]
-        public IActionResult EditSandals(int changes, bool Approval)
+        [Route("Approve_Sandals{changes:int}")]
+        public IActionResult EditSandals(int changes)
         {
 
             var editsandal = (from c in dbREDJay.UserSandals
@@ -127,27 +116,24 @@ namespace REDJayREST.Controllers
                               select c).SingleOrDefault();
             if (editsandal != null)
             {
-                editsandal.AdminApproval = Approval;
+                editsandal.AdminApproval = true;
                 dbREDJay.SaveChanges();
-                if (Approval == true)
-                {
-                    return Ok("Sandals have been approved");
-                }
-                else
-                {
-                    return Ok("Sandals have not been approved");
-                }
+
+                return Ok("Sandals have been approved");
+
             }
             else
             {
-                return BadRequest("Sandals were not approved");
+                return BadRequest("Sandals and Coats have not been approved");
             }
 
         }
+        //done--------------------------------------------------------------
+
 
         [HttpPut]
-        [Route("Approve_Shirts")]
-        public IActionResult EditShirts(int changes, bool Approval)
+        [Route("Approve_Shirts{changes:int}")]
+        public IActionResult EditShirts(int changes)
         {
 
             var editshirt = (from c in dbREDJay.UserShirts
@@ -155,27 +141,24 @@ namespace REDJayREST.Controllers
                              select c).SingleOrDefault();
             if (editshirt != null)
             {
-                editshirt.AdminApproval = Approval;
+                editshirt.AdminApproval = true;
                 dbREDJay.SaveChanges();
-                if (Approval == true)
-                {
-                    return Ok("Shirts have been approved");
-                }
-                else
-                {
-                    return Ok("Shirts have not been approved");
-                }
+
+                return Ok("Shirts have been approved");
+
             }
             else
             {
-                return BadRequest("Shirts were not approved");
+                return BadRequest("Shirts have not been approved");
             }
 
         }
+        //done--------------------------------------------------------------
+
 
         [HttpPut]
-        [Route("Approve_Sneakers")]
-        public IActionResult EditSneakers(int changes, bool Approval)
+        [Route("Approve_Sneakers{changes:int}")]
+        public IActionResult EditSneakers(int changes)
         {
 
             var editsneaker = (from c in dbREDJay.UserSneakers
@@ -183,27 +166,24 @@ namespace REDJayREST.Controllers
                                select c).SingleOrDefault();
             if (editsneaker != null)
             {
-                editsneaker.AdminApproval = Approval;
+                editsneaker.AdminApproval = true;
                 dbREDJay.SaveChanges();
-                if (Approval == true)
-                {
-                    return Ok("Sneakers have been approved");
-                }
-                else
-                {
-                    return Ok("Sneakers have not been approved");
-                }
+
+                return Ok("Sneakers have been approved");
+
             }
             else
             {
-                return BadRequest("Sneakers were not approved");
+                return BadRequest("Sneakers have not been approved");
             }
 
         }
 
+        //done--------------------------------------------------------------
+
         [HttpPut]
-        [Route("Approve_SuitTop")]
-        public IActionResult EditSuitTop(int changes, bool Approval)
+        [Route("Approve_SuitTop{changes:int}")]
+        public IActionResult EditSuitTop(int changes)
         {
 
             var editsuittop = (from c in dbREDJay.UserSuitTops
@@ -211,27 +191,24 @@ namespace REDJayREST.Controllers
                                select c).SingleOrDefault();
             if (editsuittop != null)
             {
-                editsuittop.AdminApproval = Approval;
+                editsuittop.AdminApproval = true;
                 dbREDJay.SaveChanges();
-                if (Approval == true)
-                {
-                    return Ok("Suit Top has been approved");
-                }
-                else
-                {
-                    return Ok("Suit Top has not been approved");
-                }
+
+                return Ok("Suit Top has been approved");
+
             }
             else
             {
-                return BadRequest("Suit Top was not approved");
+                return BadRequest("Suit Top has not been approved");
             }
 
         }
 
+        //done--------------------------------------------------------------
+
         [HttpPut]
-        [Route("Approve_SuitBottom")]
-        public IActionResult EditSuitBottom(int changes, bool Approval)
+        [Route("Approve_SuitBottom{changes:int}")]
+        public IActionResult EditSuitBottom(int changes)
         {
 
             var editsuitbottom = (from c in dbREDJay.UserSuitBottoms
@@ -239,27 +216,24 @@ namespace REDJayREST.Controllers
                                   select c).SingleOrDefault();
             if (editsuitbottom != null)
             {
-                editsuitbottom.AdminApproval = Approval;
+                editsuitbottom.AdminApproval = true;
                 dbREDJay.SaveChanges();
-                if (Approval == true)
-                {
-                    return Ok("Suit Bottom has been approved");
-                }
-                else
-                {
-                    return Ok("Suit Bottom has not been approved");
-                }
+
+                return Ok("Suit Bottom has been approved");
+
             }
             else
             {
-                return BadRequest("Suit Bottom was not approved");
+                return BadRequest("Suit Bottom has not been approved");
             }
 
         }
+        //done--------------------------------------------------------------
+
 
         [HttpPut]
-        [Route("Approve_Shorts")]
-        public IActionResult EditShorts(int changes, bool Approval)
+        [Route("Approve_Shorts{changes:int}")]
+        public IActionResult EditShorts(int changes)
         {
 
             var editshorts = (from c in dbREDJay.UserShorts
@@ -267,27 +241,24 @@ namespace REDJayREST.Controllers
                               select c).SingleOrDefault();
             if (editshorts != null)
             {
-                editshorts.AdminApproval = Approval;
+                editshorts.AdminApproval = true;
                 dbREDJay.SaveChanges();
-                if (Approval == true)
-                {
-                    return Ok("Shorts have been approved");
-                }
-                else
-                {
-                    return Ok("Shorts have not been approved");
-                }
+
+                return Ok("Shorts have been approved");
+
             }
             else
             {
-                return BadRequest("Shorts were not approved");
+                return BadRequest("Shorts have not been approved");
             }
 
         }
 
+        //done--------------------------------------------------------------
+
         [HttpPut]
-        [Route("Approve_TankTops")]
-        public IActionResult EditTankTops(int changes, bool Approval)
+        [Route("Approve_TankTops{changes:int}")]
+        public IActionResult EditTankTops(int changes)
         {
 
             var edittanktop = (from c in dbREDJay.UserTankTops
@@ -295,27 +266,24 @@ namespace REDJayREST.Controllers
                                select c).SingleOrDefault();
             if (edittanktop != null)
             {
-                edittanktop.AdminApproval = Approval;
+                edittanktop.AdminApproval = true;
                 dbREDJay.SaveChanges();
-                if (Approval == true)
-                {
-                    return Ok("Tank Top has been approved");
-                }
-                else
-                {
-                    return Ok("Tank Top has not been approved");
-                }
+
+                return Ok("Tank Tops have been approved");
+
             }
             else
             {
-                return BadRequest("Tank Top was not approved");
+                return BadRequest("Tank Tops have not been approved");
             }
 
         }
+        //done--------------------------------------------------------------
+
 
         [HttpPut]
-        [Route("Approve_Sweats")]
-        public IActionResult EditSweats(int changes, bool Approval)
+        [Route("Approve_Sweats{changes:int}")]
+        public IActionResult EditSweats(int changes)
         {
 
             var editsweats = (from c in dbREDJay.UserSweats
@@ -323,23 +291,19 @@ namespace REDJayREST.Controllers
                               select c).SingleOrDefault();
             if (editsweats != null)
             {
-                editsweats.AdminApproval = Approval;
+                editsweats.AdminApproval = true;
                 dbREDJay.SaveChanges();
-                if (Approval == true)
-                {
-                    return Ok("Sweats have been approved");
-                }
-                else
-                {
-                    return Ok("Sweats have not been approved");
-                }
+
+                return Ok("Sweats have been approved");
+
             }
             else
             {
-                return BadRequest("Sweats were not approved");
+                return BadRequest("Sweats have not been approved");
             }
 
         }
+
 
 
 
