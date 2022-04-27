@@ -406,6 +406,8 @@ approveUserSuitBottom(id:any)
   return(this._http.put("https://localhost:7041/api/AdminApproval/Approve_SuitBottom/"+id,null))
 }
 
+
+
 //approve user Shorts
 approveUserShorts(id:any)
 {

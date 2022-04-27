@@ -187,6 +187,17 @@ export class UploadpageComponent implements OnInit {
       });
       }
 
+      editUserSweats(sweatsid:any) 
+      {
+
+      console.log(sweatsid)
+
+      this._clothes.approveUserSweats(sweatsid).subscribe((result)=> {
+        console.log(result)
+      });
+      }
+
+
 
       editUserSandals(sandalsid:any) 
       {
