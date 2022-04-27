@@ -421,6 +421,73 @@ approveUserShorts(id:any)
     return(this._http.get('https://localhost:7041/api/UserInventory/GetUserBoots'))
   }
 
+  //get user FullPieceSuit
+  getUserFullPieceSuit()
+  {
+    return(this._http.get('https://localhost:7041/api/UserInventory/GetUserFullPieceSuit'))
+  }
+
+  //get user JacketsCoat
+  getUserJacketsCoat()
+  {
+    return(this._http.get('https://localhost:7041/api/UserInventory/GetUserJacketsCoat'))
+  }
+
+  //get user Sneaker
+  getUserSneaker()
+  {
+    return(this._http.get('https://localhost:7041/api/UserInventory/GetUserSneaker'))
+  }
+
+  //get user Sweats
+  getUserSweats()
+  {
+    return(this._http.get('https://localhost:7041/api/UserInventory/GetUserSweats'))
+  }
+
+  //get user Jean
+  getUserJean()
+  {
+    return(this._http.get('https://localhost:7041/api/UserInventory/GetUserJean'))
+  }
+
+  //get user Sandals
+  getUserSandals()
+  {
+    return(this._http.get('https://localhost:7041/api/UserInventory/GetUserSandals'))
+  }
+
+  //get user Shirts
+  getUserShirts()
+  {
+    return(this._http.get('https://localhost:7041/api/UserInventory/GetUserShirts'))
+  }
+
+  //get user SuitTop
+  getUserSuitTop()
+  {
+    return(this._http.get('https://localhost:7041/api/UserInventory/GetUserSuitTop'))
+  }
+
+  //get user SuitBottom
+  getUserSuitBottom()
+  {
+    return(this._http.get('https://localhost:7041/api/UserInventory/GetUserSuitBottom'))
+  }
+
+  //get user TankTop
+  getUserTankTop()
+  {
+    return(this._http.get('https://localhost:7041/api/UserInventory/GetUserTankTop'))
+  }
+
+  //get user Shorts
+  getUserShorts()
+  {
+    return(this._http.get('https://localhost:7041/api/UserInventory/GetUserShorts'))
+  }
+
+
 
 
 
