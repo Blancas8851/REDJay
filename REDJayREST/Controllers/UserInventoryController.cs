@@ -23,6 +23,17 @@ namespace REDJayREST.Controllers
             else
                 return BadRequest("Boot not added successfully");
         }
+
+        [HttpGet]
+        [Route("GetUserBoots")]
+        public IActionResult getUserBoots()
+        {
+
+            var allboot = from j in dbREDJay.UserBoots
+                          select j;
+            return Ok(allboot);
+
+        }
         #endregion
         #region FullPieceSuit Post
         [HttpPost]
@@ -39,13 +50,24 @@ namespace REDJayREST.Controllers
             else
                 return BadRequest("Full Piece Suit not added successfully");
         }
+
+        [HttpGet]
+        [Route("GetUserFullPieceSuit")]
+        public IActionResult getUserFPS()
+        {
+
+            var allFPS = from j in dbREDJay.UserFullPieceSuits
+                          select j;
+            return Ok(allFPS);
+
+        }
         #endregion
         #region JacketsCoat Post
         [HttpPost]
         [Route("Add_JacketsCoat")]
-        public IActionResult AddJacketsCoat(string jacketstyle, string jacketbrand, int jacketsize, int condition, bool instock)
+        public IActionResult AddJacketsCoat(UserJacketsCoat newJacket)
         {
-            UserJacketsCoat newJacketCoat = new UserJacketsCoat() { UploadStyle = jacketstyle, UploadBrand = jacketbrand, UploadSize = jacketsize, UploadCondition = condition, InStock = instock, };
+            UserJacketsCoat newJacketCoat = new UserJacketsCoat() { UploadStyle = newJacket.UploadStyle, UploadBrand = newJacket.UploadBrand, InStock = newJacket.InStock, UploadSize = newJacket.UploadSize, UploadCondition = newJacket.UploadCondition };
             if (newJacketCoat != null)
             {
                 Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry<UserJacketsCoat> entityEntry = dbREDJay.UserJacketsCoats.Add(newJacketCoat);
@@ -55,13 +77,23 @@ namespace REDJayREST.Controllers
             else
                 return BadRequest("Jacket not added successfully");
         }
+        [HttpGet]
+        [Route("GetUserJacketsCoat")]
+        public IActionResult getUserJacketsCoat()
+        {
+
+            var all = from j in dbREDJay.UserJacketsCoats
+                          select j;
+            return Ok(all);
+
+        }
         #endregion
         #region Sneaker Post
         [HttpPost]
         [Route("Add_Sneaker")]
-        public IActionResult AddSneaker(string sneakername, string brandname, bool instock, int shoesizeid, int conditionid)
+        public IActionResult AddSneaker(UserSneaker newSneak)
         {
-            UserSneaker newSneaker = new UserSneaker() { UploadStyle = sneakername, UploadBrand = brandname, InStock = instock, UploadSize = shoesizeid, UploadCondition = conditionid };
+            UserSneaker newSneaker = new UserSneaker() { UploadStyle = newSneak.UploadStyle, UploadBrand = newSneak.UploadBrand, InStock = newSneak.InStock, UploadSize = newSneak.UploadSize, UploadCondition = newSneak.UploadCondition };
             if (newSneaker != null)
             {
                 Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry<UserSneaker> entityEntry = dbREDJay.UserSneakers.Add(newSneaker);
@@ -71,13 +103,24 @@ namespace REDJayREST.Controllers
             else
                 return BadRequest("Sneaker not added successfully");
         }
+
+        [HttpGet]
+        [Route("GetUserSneaker")]
+        public IActionResult getUserSneaker()
+        {
+
+            var all = from j in dbREDJay.UserSneakers
+                      select j;
+            return Ok(all);
+
+        }
         #endregion
         #region Sweats Post
         [HttpPost]
         [Route("Add_Sweats")]
-        public IActionResult AddSwests(string sweatsname, string brandname, bool instock, int sizeid, int conditionid)
+        public IActionResult AddSwests(UserSweat newSweat)
         {
-            UserSweat newsweats = new UserSweat() { UploadStyle = sweatsname, UploadBrand = brandname, InStock = instock, UploadSize = sizeid, UploadCondition = conditionid };
+            UserSweat newsweats = new UserSweat() { UploadStyle = newSweat.UploadStyle, UploadBrand = newSweat.UploadBrand, InStock = newSweat.InStock, UploadSize = newSweat.UploadSize, UploadCondition = newSweat.UploadCondition };
             if (newsweats != null)
             {
                 Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry<UserSweat> entityEntry = dbREDJay.UserSweats.Add(newsweats);
@@ -87,13 +130,24 @@ namespace REDJayREST.Controllers
             else
                 return BadRequest("Sweats not added successfully");
         }
+
+        [HttpGet]
+        [Route("GetUserSweats")]
+        public IActionResult GetUserSweats()
+        {
+
+            var all = from j in dbREDJay.UserSweats
+                      select j;
+            return Ok(all);
+
+        }
         #endregion
         #region Jean Post
         [HttpPost]
-        [Route("Add_Jeans")]
-        public IActionResult AddJeans(string stylename, string brandname, bool instock, int sizeid, int conditionid)
+        [Route("Add_UserJeans")]
+        public IActionResult AddJeans(UserJean newJean)
         {
-            UserJean newjeans = new UserJean() { UploadStyle = stylename, UploadBrand = brandname, InStock = instock, UploadSize = sizeid, UploadCondition = conditionid };
+            UserJean newjeans = new UserJean() { UploadStyle = newJean.UploadStyle, UploadBrand = newJean.UploadBrand, InStock = newJean.InStock, UploadSize = newJean.UploadSize, UploadCondition = newJean.UploadCondition };
             if (newjeans != null)
             {
                 Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry<UserJean> entityEntry = dbREDJay.UserJeans.Add(newjeans);
@@ -103,13 +157,30 @@ namespace REDJayREST.Controllers
             else
                 return BadRequest("Jeans not added successfully");
         }
+        [HttpGet]
+        [Route("GetUserJean")]
+        public IActionResult getUserJean()
+        {
+
+            var all = from j in dbREDJay.UserJeans
+                      select j;
+            return Ok(all);
+
+        }
         #endregion
         #region Sandals Post
         [HttpPost]
         [Route("Add_Sandals")]
-        public IActionResult AddSandals(string sandalname, string brandname, bool instock, int shoesizeid, int conditionid)
+        public IActionResult AddSandals(UserSandal newSandal)
         {
-            UserSandal newSandals = new UserSandal() { UploadStyle = sandalname, UploadBrand = brandname, InStock = instock, UploadSize = shoesizeid, UploadCondition = conditionid };
+            UserSandal newSandals = new UserSandal()
+            {
+                UploadStyle = newSandal.UploadStyle,
+                UploadBrand = newSandal.UploadBrand,
+                InStock = newSandal.InStock,
+                UploadSize = newSandal.UploadSize,
+                UploadCondition = newSandal.UploadCondition
+            };
             if (newSandals != null)
             {
                 Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry<UserSandal> entityEntry = dbREDJay.UserSandals.Add(newSandals);
@@ -118,14 +189,27 @@ namespace REDJayREST.Controllers
             }
             else
                 return BadRequest("Sandals not added successfully");
+
+
+         
+        }
+        [HttpGet]
+        [Route("GetUserSandals")]
+        public IActionResult getUserSandals()
+        {
+
+            var all = from j in dbREDJay.UserSandals
+                      select j;
+            return Ok(all);
+
         }
         #endregion
         #region Shirts Post
         [HttpPost]
         [Route("Add_Shirts")]
-        public IActionResult AddShirt(string shirtname, string brandname, bool instock, int sizeid, int conditionid)
+        public IActionResult AddShirt(UserShirt newShirts)
         {
-            UserShirt newShirt = new UserShirt() { UploadStyle = shirtname, UploadBrand = brandname, InStock = instock, UploadSize = sizeid, UploadCondition = conditionid };
+            UserShirt newShirt = new UserShirt() { UploadStyle = newShirts.UploadStyle, UploadBrand = newShirts.UploadBrand, InStock = newShirts.InStock, UploadSize = newShirts.UploadSize, UploadCondition = newShirts.UploadCondition };
             if (newShirt != null)
             {
                 Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry<UserShirt> entityEntry = dbREDJay.UserShirts.Add(newShirt);
@@ -135,13 +219,35 @@ namespace REDJayREST.Controllers
             else
                 return BadRequest("Shirt not added successfully");
         }
+
+
+
+        [HttpGet]
+        [Route("GetUserShirts")]
+        public IActionResult getUserShirts()
+        {
+
+            var all = from j in dbREDJay.UserShirts
+                      select j;
+            return Ok(all);
+
+        }
         #endregion
         #region SuitTop Post
         [HttpPost]
         [Route("Add_SuitTop")]
-        public IActionResult AddSuitTop(string suittopname, string brandname, bool instock, int sizeid, int conditionid)
+        public IActionResult AddSuitTop(UserSuitTop newTop)
         {
-            UserSuitTop newsuittop = new UserSuitTop() { UploadStyle = suittopname, UploadBrand = brandname, InStock = instock, UploadSize = sizeid, UploadCondition = conditionid };
+            UserSuitTop newsuittop = new UserSuitTop() {
+                UploadStyle = newTop.UploadStyle,
+                UploadBrand = newTop.UploadBrand,
+                InStock = newTop.InStock,
+                UploadSize = newTop.UploadSize,
+                UploadCondition = newTop.UploadCondition
+
+
+
+            };
             if (newsuittop != null)
             {
                 Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry<UserSuitTop> entityEntry = dbREDJay.UserSuitTops.Add(newsuittop);
@@ -151,13 +257,34 @@ namespace REDJayREST.Controllers
             else
                 return BadRequest("Suit Top not added successfully");
         }
+
+
+        [HttpGet]
+        [Route("GetUserSuitTop")]
+        public IActionResult getUserSuitTop()
+        {
+
+            var all = from j in dbREDJay.UserSuitTops
+                      select j;
+            return Ok(all);
+
+        }
         #endregion
         #region SuitBottom Post
         [HttpPost]
         [Route("Add_SuitBottom")]
-        public IActionResult AddSuitBottom(string stylename, string brandname, bool instock, int sizeid, int conditionid)
+        public IActionResult AddSuitBottom(UserSuitBottom newBottom)
         {
-            UserSuitBottom newSuitBottom = new UserSuitBottom() { UploadStyle = stylename, UploadBrand = brandname, InStock = instock, UploadSize = sizeid, UploadCondition = conditionid };
+            UserSuitBottom newSuitBottom = new UserSuitBottom() {
+                UploadStyle = newBottom.UploadStyle,
+                UploadBrand = newBottom.UploadBrand,
+                InStock = newBottom.InStock,
+                UploadSize = newBottom.UploadSize,
+                UploadCondition = newBottom.UploadCondition
+
+
+
+            };
             if (newSuitBottom != null)
             {
                 Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry<UserSuitBottom> entityEntry = dbREDJay.UserSuitBottoms.Add(newSuitBottom);
@@ -166,6 +293,16 @@ namespace REDJayREST.Controllers
             }
             else
                 return BadRequest("Suit Bottom not added successfully");
+        }
+        [HttpGet]
+        [Route("GetUserSuitBottom")]
+        public IActionResult getUserSuitBottom()
+        {
+
+            var all = from j in dbREDJay.UserSuitBottoms
+                      select j;
+            return Ok(all);
+
         }
         #endregion
         #region TankTop Post
@@ -183,13 +320,23 @@ namespace REDJayREST.Controllers
             else
                 return BadRequest("TankTop not added successfully");
         }
+        [HttpGet]
+        [Route("GetUserTankTop")]
+        public IActionResult getUserTankTop()
+        {
+
+            var all = from j in dbREDJay.TankTops
+                      select j;
+            return Ok(all);
+
+        }
         #endregion
         #region Shorts Post
         [HttpPost]
         [Route("Add_Shorts")]
-        public IActionResult AddShorts(string shortname, string brandname, bool instock, int size, int conditionid)
+        public IActionResult AddShorts(UserShort newShort)
         {
-            UserShort newShorts = new UserShort() { UploadStyle = shortname, UploadBrand = brandname, InStock = instock, UploadSize = size, UploadCondition = conditionid };
+            UserShort newShorts = new UserShort() { UploadStyle = newShort.UploadStyle, UploadBrand = newShort.UploadBrand, InStock = newShort.InStock, UploadSize = newShort.UploadSize, UploadCondition = newShort.UploadCondition };
             if (newShorts != null)
             {
                 Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry<UserShort> entityEntry = dbREDJay.UserShorts.Add(newShorts);
@@ -199,20 +346,22 @@ namespace REDJayREST.Controllers
             else
                 return BadRequest("Shorts not added successfully");
         }
+
+        [HttpGet]
+        [Route("GetUserShorts")]
+        public IActionResult getUserShorts()
+        {
+
+            var all = from j in dbREDJay.UserShorts
+                      select j;
+            return Ok(all);
+
+        }
         #endregion
 
 
-       
-            [HttpGet]
-            [Route ("GetUserBoots")]
-            public IActionResult getUserBoots()
-        {
 
-            var allboot = from j in dbREDJay.UserBoots
-                         select j;
-            return Ok(allboot);
 
-        }
 
         [HttpPut]
         [Route("Edit_Boots")]
