@@ -8,13 +8,20 @@
 
 <app-nav-bar></app-nav-bar> 
 <hr size="10"/>
-<button (click)="getAllCustomers()"> click me!</button>
-<p *ngFor="let c of customersData"> {{c.customerFirstName}} {{c.customerLastName}}</p>
+<h2>Welcome to REDJay Donations!</h2>
+<img src="https://image.shutterstock.com/image-photo/volunteers-sorting-out-donated-clothes-260nw-1845553819.jpg">
+<h2>View Inventory</h2>
+<hr/>
+<h2>Find Locations</h2>
+<hr/>
+<h2>Upload Items</h2>
+<!--<button (click)="getAllCustomers()"> click me!</button>
+<p *ngFor="let c of customersData"> {{c.customerFirstName}} {{c.customerLastName}}</p>-->
 
 
 
 
-<form id  = "addstuff" #AddForm = "ngForm" (ngSubmit) = "addboots(AddForm.value)">
+<!--<form id  = "addstuff" #AddForm = "ngForm" (ngSubmit) = "addboots(AddForm.value)">
 
 
     <input type="text" name = "UploadStyle" ngModel placeholder="Boot Style" />
@@ -35,17 +42,18 @@
     
 </select>
 
-<button type="submit"> click me for boot!</button>
-</form> 
+<button type="submit"> click me for boot</button>
+</form> -->
 
 
 
 
-<button id = "approve" (click)="getAllUsersBoot()"> click boot!</button>
+<!--<button id = "approve" (click)="getAllUsersBoot()"> click boot!</button>
 <div *ngFor="let b of customersData"> {{b.uploadStyle}} {{b.uploadBrand}}
 
 
 <button id= "approve" (click) = "editUserBoot(b.pkBootsId)" >Approve</button>
 
-</div>
+</div>-->
+
 <app-footer id="footer"></app-footer>

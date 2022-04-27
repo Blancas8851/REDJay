@@ -4,6 +4,9 @@ h1 {
     color: rgb(141, 38, 38);
     font-family: "Copperplate", fantasy;
 }
+h2 {
+    font-size: 100;
+}
 
 .header img {
     float: left;
