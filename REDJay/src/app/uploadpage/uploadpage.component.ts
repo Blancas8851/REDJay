@@ -27,6 +27,18 @@ export class UploadpageComponent implements OnInit {
    importData:any = [] ;
    
   customersData:any = [] ;
+  customersData1:any = [] ;
+  customersData2:any = [] ;
+  customersData3:any = [] ;
+  customersData4:any = [] ;
+  customersData5:any = [] ;
+  customersData6:any = [] ;
+  customersData7:any = [] ;
+  customersData8:any = [] ;
+  customersData9:any = [] ;
+  customersData10:any = [] ;
+  customersData11:any = [] ;
+  
    
 
     
@@ -51,7 +63,7 @@ export class UploadpageComponent implements OnInit {
       getAllUserJacketsCoat()
       {
       this._clothes.getUserJacketsCoat().subscribe((result) => { 
-        this.customersData = result
+        this.customersData3 = result
         console.log(result)
       });
 
@@ -59,7 +71,7 @@ export class UploadpageComponent implements OnInit {
       getAllUserSneaker()
       {
       this._clothes.getUserSneaker().subscribe((result) => { 
-        this.customersData = result
+        this.customersData1 = result
         console.log(result)
       });
 
@@ -68,7 +80,7 @@ export class UploadpageComponent implements OnInit {
       getAllUserSweats()
       {
       this._clothes.getUserSweats().subscribe((result) => { 
-        this.customersData = result
+        this.customersData4 = result
         console.log(result)
       });
 
@@ -76,7 +88,7 @@ export class UploadpageComponent implements OnInit {
       getAllUserFullPieceSuit()
       {
       this._clothes.getUserFullPieceSuit().subscribe((result) => { 
-        this.customersData = result
+        this.customersData2 = result
         console.log(result)
       });
 
@@ -85,49 +97,49 @@ export class UploadpageComponent implements OnInit {
 
       {
       this._clothes.  getUserJean().subscribe((result) => { 
-        this.customersData = result
+        this.customersData5 = result
         console.log(result)
       });
     }
           getAllUserSandals()
           {
           this._clothes.getUserSandals().subscribe((result) => { 
-            this.customersData = result
+            this.customersData6 = result
             console.log(result)
           });
         }
         getAllUserShirts()
           {
           this._clothes.getUserShirts().subscribe((result) => { 
-            this.customersData = result
+            this.customersData7 = result
             console.log(result)
           });
         }
         getAllUserSuitTop()
           {
           this._clothes.getUserSuitTop().subscribe((result) => { 
-            this.customersData = result
+            this.customersData8 = result
             console.log(result)
           });
             }
             getAllUserSuitBottom()
         {
         this._clothes.getUserSuitBottom().subscribe((result) => { 
-          this.customersData = result
+          this.customersData9 = result
           console.log(result)
         });
       }
       getAllUserTankTop()
       {
       this._clothes.getUserTankTop().subscribe((result) => { 
-        this.customersData = result
+        this.customersData10 = result
         console.log(result)
       });
     }
     getAllUserShorts()
       {
       this._clothes.getUserShorts().subscribe((result) => { 
-        this.customersData = result
+        this.customersData11 = result
         console.log(result)
       });
       }
@@ -154,16 +166,7 @@ export class UploadpageComponent implements OnInit {
       });
       }
 
-      editUserSweats(sweatsid:any) 
-      
-      {
-
-      console.log(sweatsid)
-
-      this._clothes.approveUserSweats(sweatsid).subscribe((result)=> {
-        console.log(result)
-      });
-      }
+     
 
 
       addFullPiece(form:any)
