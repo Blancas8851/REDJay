@@ -36,7 +36,7 @@
 
 
 <hr/>
-<form id  = "addstuff" #AddForm = "ngForm" (ngSubmit) = "addsneaker(AddForm.value)">
+<form id  = "addstuff" #AddForm1 = "ngForm" (ngSubmit) = "addsneaker(AddForm1.value)">
 
 
     <input type="text" name = "UploadStyle" ngModel placeholder="sneaker style" />
@@ -61,13 +61,13 @@
 </form> 
 <button id = "approve2" (click)="getAllUserSneaker()"> Get pending Sneakers</button>
 <div *ngFor="let b of customersData1"> {{b.uploadStyle}} {{b.uploadBrand}} 
-    <button id= "approve2" (click) = "editUserSneakers(b.pksneakerId)" >Approve</button>
+    <button id= "approve2" (click) = "editUserSneakers(b.pkSneakerId)" >Approve</button>
 </div>
 
 
 
 <hr/>
-<form id  = "addstuff" #AddForm = "ngForm" (ngSubmit) = "addFullPiece(AddForm.value)">
+<form id  = "addstuff" #AddForm2 = "ngForm" (ngSubmit) = "addFullPiece(AddForm2.value)">
 
 
     <input type="text" name = "UploadStyle" ngModel placeholder="Full Piece SuitStyle" />
@@ -94,13 +94,13 @@
 <button id = "approve" (click)="getAllUserFullPieceSuit()"> Get pending Full Piece Suit</button>
 <div *ngFor="let b of customersData2"> {{b.uploadStyle}} {{b.uploadBrand}}
 
-<button id= "approve" (click) = "editserFullPieceSuit(b.pkFullSuitId)" >Approve</button>
+<button id= "approve" (click) = "editserFullPieceSuit(b.pkFullSuit)" >Approve</button>
 
 </div>
 
 
 <hr/>
-<form id  = "addstuff" #AddForm = "ngForm" (ngSubmit) = "addJacket(AddForm.value)">
+<form id  = "addstuff" #AddForm3 = "ngForm" (ngSubmit) = "addJacket(AddForm3.value)">
 
 
     <input type="text" name = "UploadStyle" ngModel placeholder="Jacket Style" />
@@ -132,7 +132,7 @@
 
 
 <hr/>
-<form id  = "addstuff" #AddForm = "ngForm" (ngSubmit) = "addsweats(AddForm.value)">
+<form id  = "addstuff" #AddForm4 = "ngForm" (ngSubmit) = "addsweats(AddForm4.value)">
 
 
     <input type="text" name = "UploadStyle" ngModel placeholder="Sweats Style" />
@@ -165,7 +165,7 @@
 
 
 <hr/>
-<form id  = "addstuff" #AddForm = "ngForm" (ngSubmit) = "addjeans(AddForm.value)">
+<form id  = "addstuff" #AddForm5 = "ngForm" (ngSubmit) = "addjeans(AddForm5.value)">
 
 
     <input type="text" name = "UploadStyle" ngModel placeholder="Jeans Style" />
@@ -188,12 +188,12 @@
 </form> 
 <button id = "approve" (click)="getAllUserJean()"> Get pending Jeans</button>
 <div *ngFor="let b of customersData5"> {{b.uploadStyle}} {{b.uploadBrand}}
-    <button id= "approve" (click) = "editUserJeans(b.pkJeanId)" >Approve</button>
+    <button id= "approve" (click) = "editUserJeans(b.pkJeansId)" >Approve</button>
 </div>
 
 
 <hr/>
-<form id  = "addstuff" #AddForm = "ngForm" (ngSubmit) = "addSandals(AddForm.value)">
+<form id  = "addstuff" #AddForm6 = "ngForm" (ngSubmit) = "addSandals(AddForm6.value)">
 
 
     <input type="text" name = "UploadStyle" ngModel placeholder="Sandals Style" />
@@ -220,7 +220,7 @@
     <button id= "approve" (click) = "editUserSandals(b.pkSandalsId)" >Approve</button>
 </div>
 <hr/>
-<form id  = "addstuff" #AddForm = "ngForm" (ngSubmit) = "addShirts(AddForm.value)">
+<form id  = "addstuff" #AddForm7 = "ngForm" (ngSubmit) = "addShirts(AddForm7.value)">
 
 
     <input type="text" name = "UploadStyle" ngModel placeholder="Shirts Style" />
@@ -245,12 +245,12 @@
 </form> 
 <button id = "approve" (click)="getAllUserShirts()"> Get pending Shirt</button>
 <div *ngFor="let b of customersData7"> {{b.uploadStyle}} {{b.uploadBrand}}
-    <button id= "approve" (click) = "editUserShirts(b.pkShirtsId)" >Approve</button>
+    <button id= "approve" (click) = "editUserShirts(b.pkShirtId)" >Approve</button>
 </div>
 
 
 <hr/>
-<form id  = "addstuff" #AddForm = "ngForm" (ngSubmit) = "addSuitTop(AddForm.value)">
+<form id  = "addstuff" #AddForm8 = "ngForm" (ngSubmit) = "addSuitTop(AddForm8.value)">
 
 
     <input type="text" name = "UploadStyle" ngModel placeholder="Suit Top Style" />
@@ -273,10 +273,10 @@
 </form> 
 <button id = "approve" (click)="getAllUserSuitTop()"> Get pending Suit Top</button>
 <div *ngFor="let b of customersData8"> {{b.uploadStyle}} {{b.uploadBrand}}
-    <button id= "approve" (click) = "editUserSuitTop(b.pkSuitTopId)" >Approve</button>
+    <button id= "approve" (click) = "editUserSuitTop(b.pkSuitTop)" >Approve</button>
 </div>
 <hr/>
-<form id  = "addstuff" #AddForm = "ngForm" (ngSubmit) = "addSuitBottom(AddForm.value)">
+<form id  = "addstuff" #AddForm9 = "ngForm" (ngSubmit) = "addSuitBottom(AddForm9.value)">
 
 
     <input type="text" name = "UploadStyle" ngModel placeholder="Suit Bottom Style" />
@@ -300,10 +300,12 @@
 <button id = "approve" (click)="getAllUserSuitBottom()"> Get pending Suit Bottom</button>
 <div *ngFor="let c of customersData9"> {{c.uploadStyle}} {{c.uploadBrand}}
 
-    <button id= "approve" (click) = "editUserSuitBottom(c.pkSuitBottomId)" >Approve</button>
+    <button id= "approve" (click) = "editUserSuitBottom(c.pkSuitBottom)" >Approve</button>
 </div>
+
 <hr/>
-<form id  = "addstuff" #AddForm = "ngForm" (ngSubmit) = "addTankTop(AddForm.value)">
+
+<form id  = "addstuff" #AddForm10 = "ngForm" (ngSubmit) = "addTankTop(AddForm10.value)">
 
 
     <input type="text" name = "UploadStyle" ngModel placeholder="Tank Top Style" />
@@ -325,12 +327,12 @@
 <button type="submit"> Add Tank Top</button>
 </form> 
 <button id = "approve" (click)="getAllUserTankTop()"> Get pending Tanktop</button>
-<div *ngFor="let b of customersData10"> {{b.uploadStyle}} {{b.uploadBrand}}
+<div *ngFor="let b of customersData10"> {{b.UploadStyle}} {{b.UploadBrand}}
     <button id= "approve" (click) = "editUserTankTop(b.pkTankTopId)" >Approve</button>
 </div>
 <hr/>
 
-<form id  = "addstuff" #AddForm = "ngForm" (ngSubmit) = "addShorts(AddForm.value)">
+<form id  = "addstuff" #AddForm11 = "ngForm" (ngSubmit) = "addShorts(AddForm11.value)">
 
 
     <input type="text" name = "UploadStyle" ngModel placeholder="Shorts Style" />
@@ -352,7 +354,7 @@
 <button type="submit"> Add Shorts</button>
 </form> 
 <button id = "approve" (click)="getAllUserShorts()"> Get pending Shorts</button>
-<div *ngFor="let b of customersData11"> {{b.uploadStyle}} {{b.uploadBrand}}
+<div *ngFor="let b of customersData11"> {{b.Style}} {{b.uploadBrand}}
     <button id= "approve" (click) = "editUserShorts(b.pkShortsId)" >Approve</button>
 </div>
 <hr/>

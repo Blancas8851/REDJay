@@ -161,7 +161,7 @@ export class UploadpageComponent implements OnInit {
 
       console.log(tankid)
 
-      this._clothes.approveUserBoot(tankid).subscribe((result)=> {
+      this._clothes.approveUserTankTop(tankid).subscribe((result)=> {
         console.log(result)
       });
       }
@@ -177,7 +177,6 @@ export class UploadpageComponent implements OnInit {
           //console.log(form)
      
         }
-
 
       editserFullPieceSuit(suitid:any) 
       {

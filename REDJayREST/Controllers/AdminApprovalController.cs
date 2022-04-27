@@ -58,7 +58,7 @@ namespace REDJayREST.Controllers
         //done--------------------------------------------------------------
 
         [HttpPut]
-        [Route("Approve_JacketsCoat")]
+        [Route("Approve_JacketsCoat/{changes:int}")]
         public IActionResult EditJacketsCoat(int changes)
         {
 
