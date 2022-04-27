@@ -51,6 +51,9 @@ SendBoots(form:any)
 {
   // var data = {
   //   "UploadStyle":form, "UploadBrand" :"polo", "InStock": true, "UploadSize": 1, "UploadCondition" : 1 }
+
+
+  
      this._http
      this._http.post<any>('https://localhost:7041/api/UserInventory/Add_Boots',form,{headers:new HttpHeaders({'Content-Type':'application/json'})}).subscribe( {
        next:result=>{
