@@ -20,8 +20,14 @@ import { ClothesService } from './services/clothes.service';
 import { CustomersService } from './services/customers.service';
 import { CheckuserService } from './services/checkuser.service';
 
+
 import { UploadpageComponent } from './uploadpage/uploadpage.component';
 import { FormsModule } from '@angular/forms';
+
+
+//import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+// import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
+
 
 
 //import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -55,7 +61,10 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
 
+
     FormsModule
+
+
 
     
   ],

@@ -17,7 +17,7 @@ const routes: Routes = [
   {path:'login',component:LoginpageComponent},
   {path:'about',component:AboutuspageComponent}
 ]; 
-                          // --this is where u put all ur components and url
+   // --this is where u put all ur components and url
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
