@@ -144,6 +144,27 @@ export class UploadpageComponent implements OnInit {
       });
       }
 
+      editUserTankTop(tankid:any) 
+      {
+
+      console.log(tankid)
+
+      this._clothes.approveUserBoot(tankid).subscribe((result)=> {
+        console.log(result)
+      });
+      }
+
+      editUserSweats(sweatsid:any) 
+      
+      {
+
+      console.log(sweatsid)
+
+      this._clothes.approveUserSweats(sweatsid).subscribe((result)=> {
+        console.log(result)
+      });
+      }
+
 
       addFullPiece(form:any)
       {
